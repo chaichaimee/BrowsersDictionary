@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Browsers Dictionary NVDA Add-on</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    text-align: center;
+}
+b {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 30px;
+}
+.nvda-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+}
+.hotkey {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+.tap-explanation {
+    background: #e8f4fc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.feature-item {
+    margin: 15px 0;
+    padding-left: 10px;
+}
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="section">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+    <h1>Browsers Dictionary</h1>
+    <br>
+    <p style="text-align: center;">Your personal pronunciation dictionary for every website, spoken exactly the way you want it.</p>
+</div>
+<br>
+<div class="section">
+    <p style="text-align: center;"><b>author:</b> chai chaimee</p>
+    <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/BrowsersDictionary</p>
+</div>
+<br>
+
+<div class="section">
+<h2>Introduction</h2>
+<br>
+<p>Browsers Dictionary lets you build a custom, per-website "pronunciation dictionary" for NVDA speech. If a site uses words, abbreviations, or jargon that NVDA reads awkwardly, you can define a text or regular-expression pattern and a replacement, and NVDA will speak your replacement instead whenever that pattern appears on that specific page, on that whole website, or on any URL matching your own pattern.</p>
+<br>
+<p>The add-on works automatically once set up: it silently watches which browser tab or page is active, and rewrites the speech NVDA is about to say in real time, based on the rules you configured for the current site.</p>
+<br>
+<div class="note">
+<b>Upgrading from Invisible?</b><br>
+Browsers Dictionary is an enhanced version of the "Invisible" add-on. If you currently have Invisible installed, simply uninstall it first, then install Browsers Dictionary and keep using it right away. You do not need to redo any of your site setups: all the site settings you previously configured in Invisible are automatically carried over into Browsers Dictionary the first time it runs.
+</div>
+</div>
+
+<div class="section">
+<h3>Hot Keys</h3>
+<br>
+<div class="hotkey">
+<b>NVDA+Shift+W</b><br>
+Single Tap : Open Browsers Dictionary Settings for the current site<br>
+Double Tap : Capture the current page's URL and open the Add New Site dialog
+</div>
+<br>
+<div class="tap-explanation">
+Tap once to review or edit the dictionary entries already saved for the page you are currently on. Tap twice, quickly, while focused in your browser to immediately create a new site entry using the URL of the page you are currently viewing. If NVDA cannot detect a URL for a double tap (for example, you are not in a supported browser), it will tell you "Cannot capture URL. Make sure you are in a browser."
+</div>
+</div>
+
+<div class="section">
+<h2>Features</h2>
+<br>
+
+<div class="feature-item">
+<h3>Automatic, Live URL Tracking</h3>
+<br>
+<p>Browsers Dictionary keeps track of the page you are on without you having to do anything. It updates its record of the current URL:</p>
+<br>
+<p>- When you switch to a browser window (Firefox, Chrome, Edge, Brave, Opera, or Internet Explorer)<br>
+- When a page finishes loading<br>
+- When focus moves to a new element, at most twice per second, so it stays current without overloading the browser</p>
+<br>
+<p>This URL is what the add-on uses behind the scenes to decide which set of dictionary entries applies to what you are currently reading.</p>
+</div>
+
+<div class="feature-item">
+<h3>Per-Site Word and Pattern Replacement</h3>
+<br>
+<p>For each site you add, you can create a list of entries. Each entry has:</p>
+<br>
+<p>- A <b>Pattern</b>: the exact text, or a regular expression, to look for<br>
+- An optional <b>Replacement</b>: what NVDA should say instead. If left blank, the matched text is simply removed from speech<br>
+- A <b>Use as regular expression</b> checkbox, for advanced pattern matching</p>
+<br>
+<p>Whenever NVDA is about to speak text on a matching page, Browsers Dictionary checks it against your list and substitutes matches before the speech is spoken. Plain-text entries are matched first (longest entries first, to avoid partial overlaps), followed by your regular expressions.</p>
+</div>
+
+<div class="feature-item">
+<h3>Three Ways to Match a Site</h3>
+<br>
+<p>When adding or editing a site, you choose how broadly its dictionary entries should apply:</p>
+<br>
+<p><b>Single page only</b>: entries apply only to the exact URL you saved.<br>
+<b>Whole website (domain)</b>: entries apply to every page on the same domain, regardless of the specific path.<br>
+<b>Regular expression</b>: entries apply to any URL that matches a pattern you write, checked from the start of the address.</p>
+</div>
+
+<div class="feature-item">
+<h3>Managing Sites and Entries</h3>
+<br>
+<p>The Settings dialog (opened with a single tap of NVDA+Shift+W) contains a Site List and, for the selected site, an Entries list. From here you can:</p>
+<br>
+<p>- <b>Add</b>, <b>Edit</b>, or <b>Remove</b> a word or pattern entry, with confirmation before removal<br>
+- Open a context menu (or press Delete) on a site or an entry for quick Edit/Remove actions<br>
+- <b>Edit Site</b> or <b>Remove Site</b> directly from the Site List's context menu<br>
+- Cancel an in-progress edit and return to adding new entries</p>
+<br>
+<p>Adding a new site opens a dedicated dialog where you set its display name, URL, and matching mode; saving a new site immediately reopens the main Settings dialog for that site so you can start adding entries right away.</p>
+</div>
+
+<div class="feature-item">
+<h3>Import Entries from a File</h3>
+<br>
+<p>You can bulk-load entries into the currently selected site using <b>Import from file...</b>. Browsers Dictionary reads a JSON file containing a "words" list, where each entry can be a plain string (treated as a simple text replacement) or a full object with pattern, replacement, and regex settings. After you confirm, it reports how many entries were added and how many were skipped, for example because they already existed for that site.</p>
+</div>
+
+<div class="feature-item">
+<h3>Regex Safety Warnings and Time Budget</h3>
+<br>
+<p>To protect you from patterns that could freeze or slow down speech:</p>
+<br>
+<p>- When you save a regular expression that looks like it could cause runaway "catastrophic backtracking" (certain nested repeating groups), NVDA warns you that the pattern may run slowly, so you can simplify it. This is a helpful caution, not a hard block; the entry is still saved<br>
+- While actually speaking, Browsers Dictionary allows only a brief total processing time for all regular-expression entries on a single piece of speech. If that budget runs out, any remaining regex entries for that piece of speech are skipped so your speech is not held up<br>
+- Extremely long stretches of text are not scanned for replacements at all, since scanning them would add delay without meaningful benefit</p>
+</div>
+
+<div class="feature-item">
+<h3>Seamless Migration from Older Configurations</h3>
+<br>
+<p>Browsers Dictionary automatically checks for configuration data left behind by earlier versions or the previous "Invisible" add-on name, and merges it into its current configuration the first time it runs. Sites and entries from an older layout are copied in without overwriting anything you have already set up; if a file with the same name already exists, the older copy is kept as a backup instead of being discarded. Duplicate site files that end up representing the same site are automatically merged, with duplicate entries combined into one list.</p>
+</div>
+
+</div>
+
+<br><br>
+<h2>Support Me</h2>
+    <p>If this tool has made your life easier, consider fueling the next update with a small donation.</p>
+<br>
+<p>
+  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Support me">
+  </a>
+</p>
+<br>
+<p>Your support means the world. Let's build something great together</p>
+<br>
+  <div class="footer-note">
+<p>&copy; 2026 Chai Chaimee NVDA Add-on Released under GNU GPL</p>
+</div>
+
+</div> <!-- End container -->
+</body>
+</html>

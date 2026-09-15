@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-09-15 10:14+0700\n"
+"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Japanese\n"
+"Language: ja\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:90
+#: gui.py:208
+msgid "&Add"
+msgstr "追加(&A)"
+
+#: gui.py:93
+#: gui.py:613
+msgid "&Cancel"
+msgstr "キャンセル(&C)"
+
+#: gui.py:108
+msgid "&Close"
+msgstr "閉じる(&C)"
+
+#: gui.py:91
+msgid "&Edit"
+msgstr "編集(&E)"
+
+#: gui.py:250
+msgid "&Edit Site"
+msgstr "サイトの編集(&E)"
+
+#: gui.py:431
+msgid "&Edit Word"
+msgstr "単語の編集(&E)"
+
+#: gui.py:106
+msgid "&Import from file..."
+msgstr "ファイルからインポート(&I)..."
+
+#: gui.py:107
+msgid "&OK"
+msgstr "OK(&O)"
+
+#: gui.py:92
+msgid "&Remove"
+msgstr "削除(&R)"
+
+#: gui.py:251
+msgid "&Remove Site"
+msgstr "サイトの削除(&R)"
+
+#: gui.py:432
+msgid "&Remove Word"
+msgstr "単語の削除(&R)"
+
+#: gui.py:612
+msgid "&Save"
+msgstr "保存(&S)"
+
+#: gui.py:202
+msgid "&Update"
+msgstr "更新(&U)"
+
+#: gui.py:562
+msgid "Add New Site"
+msgstr "新しいサイトを追加"
+
+#: gui.py:598
+msgid "Apply to:"
+msgstr "適用先:"
+
+#: gui.py:296
+#: gui.py:529
+msgid "Are you sure you want to remove '{}'?"
+msgstr "'{}' を削除してもよろしいですか？"
+
+#: addonCore.py:45
+#: addonCore.py:270
+msgid "Browsers Dictionary"
+msgstr "Browsers Dictionary"
+
+#: gui.py:19
+msgid "Browsers Dictionary Settings"
+msgstr "Browsers Dictionary の設定"
+
+#: addonCore.py:294
+msgid "Cannot capture URL. Make sure you are in a browser."
+msgstr "URLを取得できません。ブラウザが開いていることを確認してください。"
+
+#: gui.py:385
+msgid "Confirm Import"
+msgstr "インポートの確認"
+
+#: gui.py:297
+#: gui.py:530
+msgid "Confirm Removal"
+msgstr "削除の確認"
+
+#: gui.py:351
+msgid "Could not read file: {}"
+msgstr "ファイルを読み込めませんでした: {}"
+
+#: gui.py:673
+msgid "Display name cannot be empty."
+msgstr "表示名は空にできません。"
+
+#: gui.py:586
+msgid "Display name:"
+msgstr "表示名:"
+
+#: gui.py:562
+msgid "Edit Site"
+msgstr "サイトの編集"
+
+#: gui.py:517
+msgid "Edit cancelled"
+msgstr "編集がキャンセルされました"
+
+#: gui.py:513
+msgid "Editing entry: {}"
+msgstr "項目の編集: {}"
+
+#: gui.py:70
+msgid "Entries"
+msgstr "項目一覧"
+
+#: gui.py:491
+msgid "Entry added successfully"
+msgstr "項目が正常に追加されました"
+
+#: gui.py:545
+msgid "Entry removed: {}"
+msgstr "項目が削除されました: {}"
+
+#: gui.py:481
+msgid "Entry updated successfully"
+msgstr "項目が正常に更新されました"
+
+#: gui.py:281
+#: gui.py:351
+#: gui.py:355
+#: gui.py:673
+#: gui.py:676
+#: gui.py:690
+#: gui.py:700
+#: gui.py:709
+msgid "Error"
+msgstr "エラー"
+
+#: gui.py:709
+msgid "Failed to add site. It may already exist."
+msgstr "サイトの追加に失敗しました。既に存在する可能性があります。"
+
+#: gui.py:548
+msgid "Failed to remove entry"
+msgstr "項目の削除に失敗しました"
+
+#: gui.py:329
+msgid "Failed to remove site"
+msgstr "サイトの削除に失敗しました"
+
+#: manager.py:417
+#: manager.py:451
+msgid "Failed to save configuration (permission or disk error)"
+msgstr "設定の保存に失敗しました (アクセス許可またはディスクエラー)"
+
+#: gui.py:700
+msgid "Failed to update site. The display name might already exist."
+msgstr "サイトの更新に失敗しました。表示名が既に存在する可能性があります。"
+
+#: gui.py:423
+msgid "Import completed: {} added, {} skipped."
+msgstr "インポートが完了しました: {} 件追加、{} 件スキップ。"
+
+#: gui.py:382
+msgid "Import {} word(s) into the current site '{}'?"
+msgstr "現在のサイト '{}' に {} 件の単語をインポートしますか？"
+
+#: gui.py:379
+msgid "Information"
+msgstr "情報"
+
+#: gui.py:466
+#: gui.py:690
+msgid "Invalid Regular Expression: {}"
+msgstr "無効な正規表現: {}"
+
+#: gui.py:460
+msgid "No site selected"
+msgstr "サイトが選択されていません"
+
+#: gui.py:379
+msgid "No valid word entries found in the file."
+msgstr "ファイル内に有効な単語項目が見つかりませんでした。"
+
+#: addonCore.py:268
+msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
+msgstr "Browsers Dictionary の設定を開く (1回タップ) または 新しいサイトを追加 (2回タップ)"
+
+#: manager.py:436
+msgid "Original entry not found"
+msgstr "元の項目が見つかりません"
+
+#: gui.py:76
+msgid "Pattern:"
+msgstr "パターン:"
+
+#: gui.py:457
+msgid "Please enter a pattern"
+msgstr "パターンを入力してください"
+
+#: gui.py:334
+msgid "Please select a site first."
+msgstr "最初にサイトを選択してください。"
+
+#: manager.py:383
+#: manager.py:384
+msgid "Regex"
+msgstr "正規表現"
+
+#: gui.py:604
+msgid "Regular expression (match URL from start)"
+msgstr "正規表現 (先頭からのURL一致)"
+
+#: gui.py:81
+msgid "Replacement:"
+msgstr "置換:"
+
+#: gui.py:339
+msgid "Select a JSON file to import"
+msgstr "インポートする JSON ファイルを選択"
+
+#: gui.py:602
+msgid "Single page only"
+msgstr "単一ページのみ"
+
+#: gui.py:64
+msgid "Site List"
+msgstr "サイト一覧"
+
+#: manager.py:398
+#: manager.py:423
+msgid "Site not found"
+msgstr "サイトが見つかりません"
+
+#: gui.py:327
+msgid "Site removed: {}"
+msgstr "サイトが削除されました: {}"
+
+#: gui.py:355
+msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
+msgstr "選択されたファイルは有効な Browsers Dictionary サイト設定ファイルではないようです。"
+
+#: manager.py:411
+#: manager.py:440
+msgid "This pattern/regex combination already exists"
+msgstr "このパターンと正規表現の組み合わせは既に存在します"
+
+#: gui.py:676
+msgid "URL cannot be empty."
+msgstr "URLは空にできません。"
+
+#: gui.py:592
+msgid "URL:"
+msgstr "URL:"
+
+#: gui.py:86
+msgid "Use as regular expression"
+msgstr "正規表現として使用"
+
+#: gui.py:425
+msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
+msgstr "警告: インポートされたパターンの1つ以上が長文で動作が遅くなったり音声読み上げをフリーズさせたりする可能性があります。項目一覧で確認してください。"
+
+#: gui.py:496
+msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
+msgstr "警告: このパターンは長文で動作が遅くなったり音声読み上げをフリーズさせたりする可能性があります。簡略化を検討してください。"
+
+#: gui.py:697
+#: gui.py:705
+msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
+msgstr "警告: このパターンはURLの照合時に動作が遅くなったり音声読み上げをフリーズさせたりする可能性があります。簡略化を検討してください。"
+
+#: gui.py:603
+msgid "Whole website (domain)"
+msgstr "ウェブサイト全体 (ドメイン)"

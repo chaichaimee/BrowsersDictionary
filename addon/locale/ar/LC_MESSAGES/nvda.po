@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-09-15 10:14+0700\n"
+"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Arabic\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:90
+#: gui.py:208
+msgid "&Add"
+msgstr "إ&ضافة"
+
+#: gui.py:93
+#: gui.py:613
+msgid "&Cancel"
+msgstr "إ&لغاء"
+
+#: gui.py:108
+msgid "&Close"
+msgstr "إ&غلاق"
+
+#: gui.py:91
+msgid "&Edit"
+msgstr "&تعديل"
+
+#: gui.py:250
+msgid "&Edit Site"
+msgstr "ت&عديل الموقع"
+
+#: gui.py:431
+msgid "&Edit Word"
+msgstr "ت&عديل الكلمة"
+
+#: gui.py:106
+msgid "&Import from file..."
+msgstr "اس&تيراد من ملف..."
+
+#: gui.py:107
+msgid "&OK"
+msgstr "موا&فق"
+
+#: gui.py:92
+msgid "&Remove"
+msgstr "إ&زالة"
+
+#: gui.py:251
+msgid "&Remove Site"
+msgstr "إز&الة الموقع"
+
+#: gui.py:432
+msgid "&Remove Word"
+msgstr "إز&الة الكلمة"
+
+#: gui.py:612
+msgid "&Save"
+msgstr "ح&فظ"
+
+#: gui.py:202
+msgid "&Update"
+msgstr "ت&حديث"
+
+#: gui.py:562
+msgid "Add New Site"
+msgstr "إضافة موقع جديد"
+
+#: gui.py:598
+msgid "Apply to:"
+msgstr "تطبيق على:"
+
+#: gui.py:296
+#: gui.py:529
+msgid "Are you sure you want to remove '{}'?"
+msgstr "هل أنت تأكد من أنك تريد إزالة '{}'؟"
+
+#: addonCore.py:45
+#: addonCore.py:270
+msgid "Browsers Dictionary"
+msgstr "Browsers Dictionary"
+
+#: gui.py:19
+msgid "Browsers Dictionary Settings"
+msgstr "إعدادات Browsers Dictionary"
+
+#: addonCore.py:294
+msgid "Cannot capture URL. Make sure you are in a browser."
+msgstr "تعذر التقاط عنوان URL. تأكد من أنك في متصفح."
+
+#: gui.py:385
+msgid "Confirm Import"
+msgstr "تأكيد الاستيراد"
+
+#: gui.py:297
+#: gui.py:530
+msgid "Confirm Removal"
+msgstr "تأكيد الإزالة"
+
+#: gui.py:351
+msgid "Could not read file: {}"
+msgstr "تعذر قراءة الملف: {}"
+
+#: gui.py:673
+msgid "Display name cannot be empty."
+msgstr "لا يمكن أن يكون الاسم المعروض فارغًا."
+
+#: gui.py:586
+msgid "Display name:"
+msgstr "الاسم المعروض:"
+
+#: gui.py:562
+msgid "Edit Site"
+msgstr "تعديل الموقع"
+
+#: gui.py:517
+msgid "Edit cancelled"
+msgstr "تم إلغاء التعديل"
+
+#: gui.py:513
+msgid "Editing entry: {}"
+msgstr "تعديل المدخلة: {}"
+
+#: gui.py:70
+msgid "Entries"
+msgstr "المدخلات"
+
+#: gui.py:491
+msgid "Entry added successfully"
+msgstr "تمت إضافة المدخلة بنجاح"
+
+#: gui.py:545
+msgid "Entry removed: {}"
+msgstr "تمت إزالة المدخلة: {}"
+
+#: gui.py:481
+msgid "Entry updated successfully"
+msgstr "تم تحديث المدخلة بنجاح"
+
+#: gui.py:281
+#: gui.py:351
+#: gui.py:355
+#: gui.py:673
+#: gui.py:676
+#: gui.py:690
+#: gui.py:700
+#: gui.py:709
+msgid "Error"
+msgstr "خطأ"
+
+#: gui.py:709
+msgid "Failed to add site. It may already exist."
+msgstr "فشلت إضافة الموقع. قد يكون موجودًا بالفعل."
+
+#: gui.py:548
+msgid "Failed to remove entry"
+msgstr "فشلت إزالة المدخلة"
+
+#: gui.py:329
+msgid "Failed to remove site"
+msgstr "فشلت إزالة الموقع"
+
+#: manager.py:417
+#: manager.py:451
+msgid "Failed to save configuration (permission or disk error)"
+msgstr "فشل حفظ التكوين (خطأ في الإذن أو القرص)"
+
+#: gui.py:700
+msgid "Failed to update site. The display name might already exist."
+msgstr "فشل تحديث الموقع. قد يكون الاسم المعروض موجودًا بالفعل."
+
+#: gui.py:423
+msgid "Import completed: {} added, {} skipped."
+msgstr "اكتمل الاستيراد: تمت إضافة {}، وتم تجاوز {}."
+
+#: gui.py:382
+msgid "Import {} word(s) into the current site '{}'?"
+msgstr "هل تريد استيراد {} كلمة (كلمات) إلى الموقع الحالي '{}'؟"
+
+#: gui.py:379
+msgid "Information"
+msgstr "معلومات"
+
+#: gui.py:466
+#: gui.py:690
+msgid "Invalid Regular Expression: {}"
+msgstr "تعبير نمطي غير صالح: {}"
+
+#: gui.py:460
+msgid "No site selected"
+msgstr "لم يتم تحديد أي موقع"
+
+#: gui.py:379
+msgid "No valid word entries found in the file."
+msgstr "لم يتم العثور على مدخلات كلمات صالحة في الملف."
+
+#: addonCore.py:268
+msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
+msgstr "افتح إعدادات Browsers Dictionary (ضغط واحدة) أو أضف موقعًا جديدًا (ضغطتان)"
+
+#: manager.py:436
+msgid "Original entry not found"
+msgstr "لم يتم العثور على المدخلة الأصلية"
+
+#: gui.py:76
+msgid "Pattern:"
+msgstr "النمط:"
+
+#: gui.py:457
+msgid "Please enter a pattern"
+msgstr "يرجى إدخال نمط"
+
+#: gui.py:334
+msgid "Please select a site first."
+msgstr "يرجى تحديد موقع أولاً."
+
+#: manager.py:383
+#: manager.py:384
+msgid "Regex"
+msgstr "تعبير نمطي"
+
+#: gui.py:604
+msgid "Regular expression (match URL from start)"
+msgstr "تعبير نمطي (مطابقة عنوان URL من البداية)"
+
+#: gui.py:81
+msgid "Replacement:"
+msgstr "الاستبدال:"
+
+#: gui.py:339
+msgid "Select a JSON file to import"
+msgstr "حدد ملف JSON للاستيراد"
+
+#: gui.py:602
+msgid "Single page only"
+msgstr "صفحة واحدة فقط"
+
+#: gui.py:64
+msgid "Site List"
+msgstr "قائمة المواقع"
+
+#: manager.py:398
+#: manager.py:423
+msgid "Site not found"
+msgstr "لم يتم العثور على الموقع"
+
+#: gui.py:327
+msgid "Site removed: {}"
+msgstr "تمت إزالة الموقع: {}"
+
+#: gui.py:355
+msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
+msgstr "لا يبدو أن الملف المحدد عبارة عن تكوين موقع Browsers Dictionary صالح."
+
+#: manager.py:411
+#: manager.py:440
+msgid "This pattern/regex combination already exists"
+msgstr "تجميع النمط/التعبير النمطي هذا موجود بالفعل"
+
+#: gui.py:676
+msgid "URL cannot be empty."
+msgstr "لا يمكن أن يكون عنوان URL فارغًا."
+
+#: gui.py:592
+msgid "URL:"
+msgstr "عنوان URL:"
+
+#: gui.py:86
+msgid "Use as regular expression"
+msgstr "استخدام كتعبير نمطي"
+
+#: gui.py:425
+msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
+msgstr "تحذير: قد يعمل نمط أو أكثر من الأنماط المستوردة ببطء أو يتسبب في تجميد الكلام في النصوص الطويلة. راجعها في قائمة المدخلات."
+
+#: gui.py:496
+msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
+msgstr "تحذير: قد يعمل هذا النمط ببطء أو يتسبب في تجميد الكلام في النصوص الطويلة. فكر في تبسيطه."
+
+#: gui.py:697
+#: gui.py:705
+msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
+msgstr "تحذير: قد يعمل هذا النمط ببطء أو يتسبب في تجميد الكلام عند مطابقة عناوين URL. فكر في تبسيطه."
+
+#: gui.py:603
+msgid "Whole website (domain)"
+msgstr "الموقع بأكمله (النطاق)"

@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-09-15 10:14+0700\n"
+"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:90
+#: gui.py:208
+msgid "&Add"
+msgstr "Aña&dir"
+
+#: gui.py:93
+#: gui.py:613
+msgid "&Cancel"
+msgstr "&Cancelar"
+
+#: gui.py:108
+msgid "&Close"
+msgstr "&Cerrar"
+
+#: gui.py:91
+msgid "&Edit"
+msgstr "&Editar"
+
+#: gui.py:250
+msgid "&Edit Site"
+msgstr "Edi&tar sitio"
+
+#: gui.py:431
+msgid "&Edit Word"
+msgstr "Editar &palabra"
+
+#: gui.py:106
+msgid "&Import from file..."
+msgstr "&Importar desde archivo..."
+
+#: gui.py:107
+msgid "&OK"
+msgstr "&Aceptar"
+
+#: gui.py:92
+msgid "&Remove"
+msgstr "E&liminar"
+
+#: gui.py:251
+msgid "&Remove Site"
+msgstr "Elimi&nar sitio"
+
+#: gui.py:432
+msgid "&Remove Word"
+msgstr "Eliminar pala&bra"
+
+#: gui.py:612
+msgid "&Save"
+msgstr "&Guardar"
+
+#: gui.py:202
+msgid "&Update"
+msgstr "A&ctualizar"
+
+#: gui.py:562
+msgid "Add New Site"
+msgstr "Añadir nuevo sitio"
+
+#: gui.py:598
+msgid "Apply to:"
+msgstr "Aplicar a:"
+
+#: gui.py:296
+#: gui.py:529
+msgid "Are you sure you want to remove '{}'?"
+msgstr "¿Seguro que quieres eliminar '{}'?"
+
+#: addonCore.py:45
+#: addonCore.py:270
+msgid "Browsers Dictionary"
+msgstr "Browsers Dictionary"
+
+#: gui.py:19
+msgid "Browsers Dictionary Settings"
+msgstr "Opciones de Browsers Dictionary"
+
+#: addonCore.py:294
+msgid "Cannot capture URL. Make sure you are in a browser."
+msgstr "No se puede capturar la URL. Asegúrate de estar en un navegador."
+
+#: gui.py:385
+msgid "Confirm Import"
+msgstr "Confirmar importación"
+
+#: gui.py:297
+#: gui.py:530
+msgid "Confirm Removal"
+msgstr "Confirmar eliminación"
+
+#: gui.py:351
+msgid "Could not read file: {}"
+msgstr "No se pudo leer el archivo: {}"
+
+#: gui.py:673
+msgid "Display name cannot be empty."
+msgstr "El nombre para mostrar no puede estar vacío."
+
+#: gui.py:586
+msgid "Display name:"
+msgstr "Nombre para mostrar:"
+
+#: gui.py:562
+msgid "Edit Site"
+msgstr "Editar sitio"
+
+#: gui.py:517
+msgid "Edit cancelled"
+msgstr "Edición cancelada"
+
+#: gui.py:513
+msgid "Editing entry: {}"
+msgstr "Editando entrada: {}"
+
+#: gui.py:70
+msgid "Entries"
+msgstr "Entradas"
+
+#: gui.py:491
+msgid "Entry added successfully"
+msgstr "Entrada añadida con éxito"
+
+#: gui.py:545
+msgid "Entry removed: {}"
+msgstr "Entrada eliminada: {}"
+
+#: gui.py:481
+msgid "Entry updated successfully"
+msgstr "Entrada actualizada con éxito"
+
+#: gui.py:281
+#: gui.py:351
+#: gui.py:355
+#: gui.py:673
+#: gui.py:676
+#: gui.py:690
+#: gui.py:700
+#: gui.py:709
+msgid "Error"
+msgstr "Error"
+
+#: gui.py:709
+msgid "Failed to add site. It may already exist."
+msgstr "Error al añadir el sitio. Es posible que ya exista."
+
+#: gui.py:548
+msgid "Failed to remove entry"
+msgstr "Error al eliminar la entrada"
+
+#: gui.py:329
+msgid "Failed to remove site"
+msgstr "Error al eliminar el sitio"
+
+#: manager.py:417
+#: manager.py:451
+msgid "Failed to save configuration (permission or disk error)"
+msgstr "Error al guardar la configuración (error de permiso o disco)"
+
+#: gui.py:700
+msgid "Failed to update site. The display name might already exist."
+msgstr "Error al actualizar el sitio. Es posible que el nombre para mostrar ya exista."
+
+#: gui.py:423
+msgid "Import completed: {} added, {} skipped."
+msgstr "Importación completada: {} añadida(s), {} omitida(s)."
+
+#: gui.py:382
+msgid "Import {} word(s) into the current site '{}'?"
+msgstr "¿Importar {} palabra(s) en el sitio actual '{}'?"
+
+#: gui.py:379
+msgid "Information"
+msgstr "Información"
+
+#: gui.py:466
+#: gui.py:690
+msgid "Invalid Regular Expression: {}"
+msgstr "Expresión regular no válida: {}"
+
+#: gui.py:460
+msgid "No site selected"
+msgstr "Ningún sitio seleccionado"
+
+#: gui.py:379
+msgid "No valid word entries found in the file."
+msgstr "No se encontraron entradas de palabras válidas en el archivo."
+
+#: addonCore.py:268
+msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
+msgstr "Abre las opciones de Browsers Dictionary (un toque) o añade un nuevo sitio (dos toques)"
+
+#: manager.py:436
+msgid "Original entry not found"
+msgstr "Entrada original no encontrada"
+
+#: gui.py:76
+msgid "Pattern:"
+msgstr "Patrón:"
+
+#: gui.py:457
+msgid "Please enter a pattern"
+msgstr "Por favor, introduce un patrón"
+
+#: gui.py:334
+msgid "Please select a site first."
+msgstr "Por favor, selecciona un sitio primero."
+
+#: manager.py:383
+#: manager.py:384
+msgid "Regex"
+msgstr "Expresión regular"
+
+#: gui.py:604
+msgid "Regular expression (match URL from start)"
+msgstr "Expresión regular (coincidir URL desde el inicio)"
+
+#: gui.py:81
+msgid "Replacement:"
+msgstr "Reemplazo:"
+
+#: gui.py:339
+msgid "Select a JSON file to import"
+msgstr "Selecciona un archivo JSON para importar"
+
+#: gui.py:602
+msgid "Single page only"
+msgstr "Solo una página"
+
+#: gui.py:64
+msgid "Site List"
+msgstr "Lista de sitios"
+
+#: manager.py:398
+#: manager.py:423
+msgid "Site not found"
+msgstr "Sitio no encontrado"
+
+#: gui.py:327
+msgid "Site removed: {}"
+msgstr "Sitio eliminado: {}"
+
+#: gui.py:355
+msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
+msgstr "El archivo seleccionado no parece ser una configuración de sitio válida de Browsers Dictionary."
+
+#: manager.py:411
+#: manager.py:440
+msgid "This pattern/regex combination already exists"
+msgstr "Esta combinación de patrón/expresión regular ya existe"
+
+#: gui.py:676
+msgid "URL cannot be empty."
+msgstr "La URL no puede estar vacía."
+
+#: gui.py:592
+msgid "URL:"
+msgstr "URL:"
+
+#: gui.py:86
+msgid "Use as regular expression"
+msgstr "Usar como expresión regular"
+
+#: gui.py:425
+msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
+msgstr "Advertencia: uno o más patrones importados pueden ejecutarse lentamente o congelar el habla en textos largos. Revísalos en la lista de Entradas."
+
+#: gui.py:496
+msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
+msgstr "Advertencia: este patrón puede ejecutarse lentamente o congelar el habla en textos largos. Considera simplificarlo."
+
+#: gui.py:697
+#: gui.py:705
+msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
+msgstr "Advertencia: este patrón puede ejecutarse lentamente o congelar el habla al coincidir con URLs. Considera simplificarlo."
+
+#: gui.py:603
+msgid "Whole website (domain)"
+msgstr "Sitio web completo (dominio)"

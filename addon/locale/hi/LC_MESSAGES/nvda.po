@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-09-15 10:14+0700\n"
+"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Hindi\n"
+"Language: hi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:90
+#: gui.py:208
+msgid "&Add"
+msgstr "जोड़ें(&A)"
+
+#: gui.py:93
+#: gui.py:613
+msgid "&Cancel"
+msgstr "रद्द करें(&C)"
+
+#: gui.py:108
+msgid "&Close"
+msgstr "बंद करें(&C)"
+
+#: gui.py:91
+msgid "&Edit"
+msgstr "संपादित करें(&E)"
+
+#: gui.py:250
+msgid "&Edit Site"
+msgstr "साइट संपादित करें(&E)"
+
+#: gui.py:431
+msgid "&Edit Word"
+msgstr "शब्द संपादित करें(&E)"
+
+#: gui.py:106
+msgid "&Import from file..."
+msgstr "फ़ाइल से आयात करें(&I)..."
+
+#: gui.py:107
+msgid "&OK"
+msgstr "ठीक है(&O)"
+
+#: gui.py:92
+msgid "&Remove"
+msgstr "हटाएं(&R)"
+
+#: gui.py:251
+msgid "&Remove Site"
+msgstr "साइट हटाएं(&R)"
+
+#: gui.py:432
+msgid "&Remove Word"
+msgstr "शब्द हटाएं(&R)"
+
+#: gui.py:612
+msgid "&Save"
+msgstr "सहेजें(&S)"
+
+#: gui.py:202
+msgid "&Update"
+msgstr "अद्यतन करें(&U)"
+
+#: gui.py:562
+msgid "Add New Site"
+msgstr "नया साइट जोड़ें"
+
+#: gui.py:598
+msgid "Apply to:"
+msgstr "पर लागू करें:"
+
+#: gui.py:296
+#: gui.py:529
+msgid "Are you sure you want to remove '{}'?"
+msgstr "क्या आप निश्चित रूप से '{}' को हटाना चाहते हैं?"
+
+#: addonCore.py:45
+#: addonCore.py:270
+msgid "Browsers Dictionary"
+msgstr "Browsers Dictionary"
+
+#: gui.py:19
+msgid "Browsers Dictionary Settings"
+msgstr "Browsers Dictionary सेटिंग्स"
+
+#: addonCore.py:294
+msgid "Cannot capture URL. Make sure you are in a browser."
+msgstr "URL कैप्चर नहीं किया जा सका। सुनिश्चित करें कि आप ब्राउज़र में हैं।"
+
+#: gui.py:385
+msgid "Confirm Import"
+msgstr "आयात की पुष्टि करें"
+
+#: gui.py:297
+#: gui.py:530
+msgid "Confirm Removal"
+msgstr "हटाने की पुष्टि करें"
+
+#: gui.py:351
+msgid "Could not read file: {}"
+msgstr "फ़ाइल नहीं पढ़ी जा सकी: {}"
+
+#: gui.py:673
+msgid "Display name cannot be empty."
+msgstr "प्रदर्शित नाम खाली नहीं हो सकता।"
+
+#: gui.py:586
+msgid "Display name:"
+msgstr "प्रदर्शित नाम:"
+
+#: gui.py:562
+msgid "Edit Site"
+msgstr "साइट संपादित करें"
+
+#: gui.py:517
+msgid "Edit cancelled"
+msgstr "संपादन रद्द किया गया"
+
+#: gui.py:513
+msgid "Editing entry: {}"
+msgstr "प्रविष्टि संपादित की जा रही है: {}"
+
+#: gui.py:70
+msgid "Entries"
+msgstr "प्रविष्टियां"
+
+#: gui.py:491
+msgid "Entry added successfully"
+msgstr "प्रविष्टि सफलतापूर्वक जोड़ी गई"
+
+#: gui.py:545
+msgid "Entry removed: {}"
+msgstr "प्रविष्टि हटाई गई: {}"
+
+#: gui.py:481
+msgid "Entry updated successfully"
+msgstr "प्रविष्टि सफलतापूर्वक अद्यतन की गई"
+
+#: gui.py:281
+#: gui.py:351
+#: gui.py:355
+#: gui.py:673
+#: gui.py:676
+#: gui.py:690
+#: gui.py:700
+#: gui.py:709
+msgid "Error"
+msgstr "त्रुटि"
+
+#: gui.py:709
+msgid "Failed to add site. It may already exist."
+msgstr "साइट जोड़ने में विफल। यह पहले से मौजूद हो सकता है।"
+
+#: gui.py:548
+msgid "Failed to remove entry"
+msgstr "प्रविष्टि हटाने में विफल"
+
+#: gui.py:329
+msgid "Failed to remove site"
+msgstr "साइट हटाने में विफल"
+
+#: manager.py:417
+#: manager.py:451
+msgid "Failed to save configuration (permission or disk error)"
+msgstr "कॉन्फ़िगरेशन सहेजने में विफल (अनुमति या डिस्क त्रुटि)"
+
+#: gui.py:700
+msgid "Failed to update site. The display name might already exist."
+msgstr "साइट अद्यतन करने में विफल। प्रदर्शित नाम पहले से मौजूद हो सकता है।"
+
+#: gui.py:423
+msgid "Import completed: {} added, {} skipped."
+msgstr "आयात पूर्ण हुआ: {} जोड़ा गया, {} छोड़ा गया।"
+
+#: gui.py:382
+msgid "Import {} word(s) into the current site '{}'?"
+msgstr "क्या वर्तमान साइट '{}' में {} शब्द आयात करें?"
+
+#: gui.py:379
+msgid "Information"
+msgstr "जानकारी"
+
+#: gui.py:466
+#: gui.py:690
+msgid "Invalid Regular Expression: {}"
+msgstr "अमान्य नियमित अभिव्यक्ति: {}"
+
+#: gui.py:460
+msgid "No site selected"
+msgstr "कोई साइट चयनित नहीं है"
+
+#: gui.py:379
+msgid "No valid word entries found in the file."
+msgstr "फ़ाइल में कोई मान्य शब्द प्रविष्टियां नहीं मिलीं।"
+
+#: addonCore.py:268
+msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
+msgstr "Browsers Dictionary सेटिंग्स खोलें (एक बार टैप करें) या नया साइट जोड़ें (दो बार टैप करें)"
+
+#: manager.py:436
+msgid "Original entry not found"
+msgstr "मूल प्रविष्टि नहीं मिली"
+
+#: gui.py:76
+msgid "Pattern:"
+msgstr "पैटर्न:"
+
+#: gui.py:457
+msgid "Please enter a pattern"
+msgstr "कृपया एक पैटर्न दर्ज करें"
+
+#: gui.py:334
+msgid "Please select a site first."
+msgstr "कृपया पहले एक साइट चुनें।"
+
+#: manager.py:383
+#: manager.py:384
+msgid "Regex"
+msgstr "रेगेक्स"
+
+#: gui.py:604
+msgid "Regular expression (match URL from start)"
+msgstr "नियमित अभिव्यक्ति (शुरुआत से URL का मिलान करें)"
+
+#: gui.py:81
+msgid "Replacement:"
+msgstr "प्रतिस्थापन:"
+
+#: gui.py:339
+msgid "Select a JSON file to import"
+msgstr "आयात करने के लिए एक JSON फ़ाइल चुनें"
+
+#: gui.py:602
+msgid "Single page only"
+msgstr "केवल एक पृष्ठ"
+
+#: gui.py:64
+msgid "Site List"
+msgstr "साइट सूची"
+
+#: manager.py:398
+#: manager.py:423
+msgid "Site not found"
+msgstr "साइट नहीं मिली"
+
+#: gui.py:327
+msgid "Site removed: {}"
+msgstr "साइट हटाई गई: {}"
+
+#: gui.py:355
+msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
+msgstr "चयनित फ़ाइल एक मान्य Browsers Dictionary साइट कॉन्फ़िगरेशन प्रतीत नहीं होती है।"
+
+#: manager.py:411
+#: manager.py:440
+msgid "This pattern/regex combination already exists"
+msgstr "यह पैटर्न/रेगेक्स संयोजन पहले से मौजूद है"
+
+#: gui.py:676
+msgid "URL cannot be empty."
+msgstr "URL खाली नहीं हो सकता।"
+
+#: gui.py:592
+msgid "URL:"
+msgstr "URL:"
+
+#: gui.py:86
+msgid "Use as regular expression"
+msgstr "नियमित अभिव्यक्ति के रूप में उपयोग करें"
+
+#: gui.py:425
+msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
+msgstr "चेतावनी: एक या अधिक आयातित पैटर्न लंबे पाठ पर धीमे चल सकते हैं या भाषण को रोक सकते हैं। प्रविष्टियां सूची में उनकी समीक्षा करें।"
+
+#: gui.py:496
+msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
+msgstr "चेतावनी: यह पैटर्न लंबे पाठ पर धीमे चल सकता है या भाषण को रोक सकता है। इसे सरल बनाने पर विचार करें।"
+
+#: gui.py:697
+#: gui.py:705
+msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
+msgstr "चेतावनी: यह पैटर्न URL का मिलान करते समय धीमे चल सकता है या भाषण को रोक सकता है। इसे सरल बनाने पर विचार करें।"
+
+#: gui.py:603
+msgid "Whole website (domain)"
+msgstr "संपूर्ण वेबसाइट (डोमेन)"

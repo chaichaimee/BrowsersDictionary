@@ -1,0 +1,291 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
+"POT-Creation-Date: 2026-09-15 10:14+0700\n"
+"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"Last-Translator: chaiBot and Malee Yamazaki\n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: DevOn Addon\n"
+
+#: gui.py:90
+#: gui.py:208
+msgid "&Add"
+msgstr "До&дати"
+
+#: gui.py:93
+#: gui.py:613
+msgid "&Cancel"
+msgstr "Ска&сувати"
+
+#: gui.py:108
+msgid "&Close"
+msgstr "&Закрити"
+
+#: gui.py:91
+msgid "&Edit"
+msgstr "Ре&дагувати"
+
+#: gui.py:250
+msgid "&Edit Site"
+msgstr "Редагувати &сайт"
+
+#: gui.py:431
+msgid "&Edit Word"
+msgstr "Редагувати сло&во"
+
+#: gui.py:106
+msgid "&Import from file..."
+msgstr "&Імпортувати з файлу..."
+
+#: gui.py:107
+msgid "&OK"
+msgstr "&OK"
+
+#: gui.py:92
+msgid "&Remove"
+msgstr "Ви&далити"
+
+#: gui.py:251
+msgid "&Remove Site"
+msgstr "Видалити са&йт"
+
+#: gui.py:432
+msgid "&Remove Word"
+msgstr "Видалити сло&во"
+
+#: gui.py:612
+msgid "&Save"
+msgstr "З&берегти"
+
+#: gui.py:202
+msgid "&Update"
+msgstr "О&новити"
+
+#: gui.py:562
+msgid "Add New Site"
+msgstr "Додати новий сайт"
+
+#: gui.py:598
+msgid "Apply to:"
+msgstr "Застосувати до:"
+
+#: gui.py:296
+#: gui.py:529
+msgid "Are you sure you want to remove '{}'?"
+msgstr "Ви дійсно бажаєте видалити '{}'?"
+
+#: addonCore.py:45
+#: addonCore.py:270
+msgid "Browsers Dictionary"
+msgstr "Browsers Dictionary"
+
+#: gui.py:19
+msgid "Browsers Dictionary Settings"
+msgstr "Налаштування Browsers Dictionary"
+
+#: addonCore.py:294
+msgid "Cannot capture URL. Make sure you are in a browser."
+msgstr "Не вдалося захопити URL. Переконайтеся, що ви перебуваєте у браузері."
+
+#: gui.py:385
+msgid "Confirm Import"
+msgstr "Підтвердження імпорту"
+
+#: gui.py:297
+#: gui.py:530
+msgid "Confirm Removal"
+msgstr "Підтвердження видалення"
+
+#: gui.py:351
+msgid "Could not read file: {}"
+msgstr "Не вдалося прочитати файл: {}"
+
+#: gui.py:673
+msgid "Display name cannot be empty."
+msgstr "Відображуване ім'я не може бути порожнім."
+
+#: gui.py:586
+msgid "Display name:"
+msgstr "Відображуване ім'я:"
+
+#: gui.py:562
+msgid "Edit Site"
+msgstr "Редагувати сайт"
+
+#: gui.py:517
+msgid "Edit cancelled"
+msgstr "Редагування скасовано"
+
+#: gui.py:513
+msgid "Editing entry: {}"
+msgstr "Редагування запису: {}"
+
+#: gui.py:70
+msgid "Entries"
+msgstr "Записи"
+
+#: gui.py:491
+msgid "Entry added successfully"
+msgstr "Запис успішно додано"
+
+#: gui.py:545
+msgid "Entry removed: {}"
+msgstr "Запис видалено: {}"
+
+#: gui.py:481
+msgid "Entry updated successfully"
+msgstr "Запис успішно оновлено"
+
+#: gui.py:281
+#: gui.py:351
+#: gui.py:355
+#: gui.py:673
+#: gui.py:676
+#: gui.py:690
+#: gui.py:700
+#: gui.py:709
+msgid "Error"
+msgstr "Помилка"
+
+#: gui.py:709
+msgid "Failed to add site. It may already exist."
+msgstr "Не вдалося додати сайт. Можливо, він уже існує."
+
+#: gui.py:548
+msgid "Failed to remove entry"
+msgstr "Не вдалося видалити запис"
+
+#: gui.py:329
+msgid "Failed to remove site"
+msgstr "Не вдалося видалити сайт"
+
+#: manager.py:417
+#: manager.py:451
+msgid "Failed to save configuration (permission or disk error)"
+msgstr "Не вдалося зберегти конфігурацію (помилка прав доступу або диска)"
+
+#: gui.py:700
+msgid "Failed to update site. The display name might already exist."
+msgstr "Не вдалося оновити сайт. Можливо, відображуване ім'я вже існує."
+
+#: gui.py:423
+msgid "Import completed: {} added, {} skipped."
+msgstr "Імпорт завершено: додано {}, пропущено {}."
+
+#: gui.py:382
+msgid "Import {} word(s) into the current site '{}'?"
+msgstr "Імпортувати {} слів(а) до поточного сайту '{}'?"
+
+#: gui.py:379
+msgid "Information"
+msgstr "Інформація"
+
+#: gui.py:466
+#: gui.py:690
+msgid "Invalid Regular Expression: {}"
+msgstr "Неприпустимий регулярний вираз: {}"
+
+#: gui.py:460
+msgid "No site selected"
+msgstr "Сайт не вибрано"
+
+#: gui.py:379
+msgid "No valid word entries found in the file."
+msgstr "У файлі не знайдено правильних словникових записів."
+
+#: addonCore.py:268
+msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
+msgstr "Відкрити налаштування Browsers Dictionary (одне торкання) або Додати новий сайт (подвійне торкання)"
+
+#: manager.py:436
+msgid "Original entry not found"
+msgstr "Початковий запис не знайдено"
+
+#: gui.py:76
+msgid "Pattern:"
+msgstr "Шаблон:"
+
+#: gui.py:457
+msgid "Please enter a pattern"
+msgstr "Будь ласка, введіть шаблон"
+
+#: gui.py:334
+msgid "Please select a site first."
+msgstr "Будь ласка, спочатку виберіть сайт."
+
+#: manager.py:383
+#: manager.py:384
+msgid "Regex"
+msgstr "Регулярний вираз"
+
+#: gui.py:604
+msgid "Regular expression (match URL from start)"
+msgstr "Регулярний вираз (зіставляти URL від початку)"
+
+#: gui.py:81
+msgid "Replacement:"
+msgstr "Заміна:"
+
+#: gui.py:339
+msgid "Select a JSON file to import"
+msgstr "Виберіть файл JSON для імпорту"
+
+#: gui.py:602
+msgid "Single page only"
+msgstr "Лише одна сторінка"
+
+#: gui.py:64
+msgid "Site List"
+msgstr "Список сайтів"
+
+#: manager.py:398
+#: manager.py:423
+msgid "Site not found"
+msgstr "Сайт не знайдено"
+
+#: gui.py:327
+msgid "Site removed: {}"
+msgstr "Сайт видалено: {}"
+
+#: gui.py:355
+msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
+msgstr "Вибраний файл не є дійсною конфігурацією сайту Browsers Dictionary."
+
+#: manager.py:411
+#: manager.py:440
+msgid "This pattern/regex combination already exists"
+msgstr "Така комбінація шаблону та регулярного виразу вже існує"
+
+#: gui.py:676
+msgid "URL cannot be empty."
+msgstr "URL не може бути порожнім."
+
+#: gui.py:592
+msgid "URL:"
+msgstr "URL:"
+
+#: gui.py:86
+msgid "Use as regular expression"
+msgstr "Використовувати як регулярний вираз"
+
+#: gui.py:425
+msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
+msgstr "Попередження: один або кілька імпортованих шаблонів можуть працювати повільно або викликати зависання мовлення на довгому тексті. Перевірте їх у списку записів."
+
+#: gui.py:496
+msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
+msgstr "Попередження: цей шаблон може працювати повільно або викликати зависання мовлення на довгому тексті. Рекомендуємо спростити його."
+
+#: gui.py:697
+#: gui.py:705
+msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
+msgstr "Попередження: цей шаблон може працювати повільно або викликати зависання мовлення під час зіставлення URL. Рекомендуємо спростити його."
+
+#: gui.py:603
+msgid "Whole website (domain)"
+msgstr "Увесь вебсайт (домен)"

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Browsers Dictionary NVDA Add-on</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    padding: 20px;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+h1, h2, h3 {
+    text-align: center;
+}
+b {
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 30px;
+}
+.nvda-logo {
+    display: block;
+    margin: 0 auto 20px;
+    width: 120px;
+    height: auto;
+}
+.hotkey {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+.tap-explanation {
+    background: #e8f4fc;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.feature-item {
+    margin: 15px 0;
+    padding-left: 10px;
+}
+.note {
+    background: #fff3cd;
+    border-left: 4px solid #ffc107;
+    padding: 12px;
+    margin: 15px 0;
+    border-radius: 0 4px 4px 0;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<div class="section">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+    <h1>Browsers Dictionary</h1>
+    <br>
+    <p style="text-align: center;">Tu diccionario de pronunciación personal para cada sitio web, leído exactamente como deseas.</p>
+</div>
+<br>
+<div class="section">
+    <p style="text-align: center;"><b>author:</b> chai chaimee</p>
+    <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/BrowsersDictionary</p>
+</div>
+<br>
+
+<div class="section">
+<h2>Introducción</h2>
+<br>
+<p>Browsers Dictionary te permite crear un "diccionario de pronunciación" personalizado por sitio web para la voz de NVDA. Si un sitio usa palabras, abreviaturas o jerga que NVDA lee de manera extraña, puedes definir un patrón de texto o expresión regular y un reemplazo, y NVDA pronunciará tu reemplazo cada vez que ese patrón aparezca en esa página específica, en todo el sitio web o en cualquier URL que coincida con tu propio patrón.</p>
+<br>
+<p>El complemento funciona automáticamente una vez configurado: supervisa silenciosamente qué pestaña o página del navegador está activa y reescribe en tiempo real el texto que NVDA va a decir, basándose en las reglas que configuraste para el sitio actual.</p>
+<br>
+<div class="note">
+<b>¿Estás actualizando desde Invisible?</b><br>
+Browsers Dictionary es una versión mejorada del complemento "Invisible". Si actualmente tienes instalado Invisible, simplemente desinstálalo primero, luego instala Browsers Dictionary y continúa usándolo de inmediato. No necesitas volver a realizar ninguna de tus configuraciones de sitios: todas las configuraciones de sitios que configuraste previamente en Invisible se transfieren automáticamente a Browsers Dictionary la primera vez que se ejecuta.
+</div>
+</div>
+
+<div class="section">
+<h3>Atajos de teclado</h3>
+<br>
+<div class="hotkey">
+<b>NVDA+Shift+W</b><br>
+Un toque : Abrir la configuración de Browsers Dictionary para el sitio actual<br>
+Doble toque : Capturar la URL de la página actual y abrir el diálogo Agregar nuevo sitio
+</div>
+<br>
+<div class="tap-explanation">
+Toca una vez para revisar o editar las entradas del diccionario ya guardadas para la página en la que te encuentras actualmente. Toca dos veces rápidamente mientras el foco está en tu navegador para crear inmediatamente una nueva entrada de sitio utilizando la URL de la página que estás viendo. Si NVDA no puede detectar una URL para un doble toque (por ejemplo, no estás en un navegador compatible), te dirá "No se puede capturar la URL. Asegúrate de estar en un navegador".
+</div>
+</div>
+
+<div class="section">
+<h2>Características</h2>
+<br>
+
+<div class="feature-item">
+<h3>Seguimiento automático y en vivo de URL</h3>
+<br>
+<p>Browsers Dictionary realiza un seguimiento de la página en la que te encuentras sin que tengas que hacer nada. Actualiza su registro de la URL actual:</p>
+<br>
+<p>- Cuando cambias a una ventana del navegador (Firefox, Chrome, Edge, Brave, Opera o Internet Explorer)<br>
+- Cuando una página termina de cargar<br>
+- Cuando el foco se mueve a un nuevo elemento, como máximo dos veces por segundo, para mantenerse actualizado sin sobrecargar el navegador</p>
+<br>
+<p>Esta URL es lo que el complemento usa en segundo plano para decidir qué conjunto de entradas de diccionario se aplica a lo que estás leyendo actualmente.</p>
+</div>
+
+<div class="feature-item">
+<h3>Reemplazo de palabras y patrones por sitio</h3>
+<br>
+<p>Para cada sitio que agregues, puedes crear una lista de entradas. Cada entrada tiene:</p>
+<br>
+<p>- Un <b>Patrón</b>: el texto exacto o una expresión regular a buscar<br>
+- Un <b>Reemplazo</b> opcional: lo que NVDA debe decir en su lugar. Si se deja en blanco, el texto coincidente simplemente se elimina de la voz<br>
+- Una casilla de verificación <b>Usar como expresión regular</b>, para coincidencias de patrones avanzados</p>
+<br>
+<p>Siempre que NVDA esté a punto de hablar texto en una página coincidente, Browsers Dictionary lo compara con tu lista y sustituye las coincidencias antes de que se pronuncie la voz. Las entradas de texto plano se comparan primero (las entradas más largas primero, para evitar solapamientos parciales), seguidas de tus expresiones regulares.</p>
+</div>
+
+<div class="feature-item">
+<h3>Tres formas de hacer coincidir un sitio</h3>
+<br>
+<p>Al agregar o editar un sitio, eliges cuán ampliamente deben aplicarse sus entradas de diccionario:</p>
+<br>
+<p><b>Solo página única</b>: las entradas se aplican solo a la URL exacta que guardaste.<br>
+<b>Todo el sitio web (dominio)</b>: las entradas se aplican a todas las páginas del mismo dominio, independientemente de la ruta específica.<br>
+<b>Expresión regular</b>: las entradas se aplican a cualquier URL que coincida con un patrón que escribas, verificado desde el principio de la dirección.</p>
+</div>
+
+<div class="feature-item">
+<h3>Gestión de sitios y entradas</h3>
+<br>
+<p>El cuadro de diálogo Configuración (abierto con un solo toque de NVDA+Shift+W) contiene una Lista de sitios y, para el sitio seleccionado, una lista de Entradas. Desde aquí puedes:</p>
+<br>
+<p>- <b>Agregar</b>, <b>Editar</b> o <b>Eliminar</b> una entrada de palabra o patrón, con confirmación antes de la eliminación<br>
+- Abrir un menú contextual (o presionar Supr) en un sitio o una entrada para acciones rápidas de Editar/Eliminar<br>
+- <b>Editar sitio</b> o <b>Eliminar sitio</b> directamente desde el menú contextual de la Lista de sitios<br>
+- Cancelar una edición en curso y volver a agregar nuevas entradas</p>
+<br>
+<p>Agregar un nuevo sitio abre un diálogo dedicado donde configuras su nombre de pantalla, URL y modo de coincidencia; guardar un nuevo sitio reabre inmediatamente el diálogo de Configuración principal para ese sitio para que puedas empezar a agregar entradas de inmediato.</p>
+</div>
+
+<div class="feature-item">
+<h3>Importar entradas desde un archivo</h3>
+<br>
+<p>Puedes cargar entradas masivamente en el sitio actualmente seleccionado usando <b>Importar desde archivo...</b>. Browsers Dictionary lee un archivo JSON que contiene una lista "words", donde cada entrada puede ser una cadena simple (tratada como un reemplazo de texto simple) o un objeto completo con configuraciones de patrón, reemplazo y regex. Después de confirmar, informa cuántas entradas se agregaron y cuántas se omitieron, por ejemplo, porque ya existían para ese sitio.</p>
+</div>
+
+<div class="feature-item">
+<h3>Advertencias de seguridad de Regex y presupuesto de tiempo</h3>
+<br>
+<p>Para protegerte de patrones que podrían congelar o ralentizar la voz:</p>
+<br>
+<p>- Cuando guardas una expresión regular que parece que podría causar un "retroceso catastrófico" descontrolado (ciertos grupos repetidos anidados), NVDA te advierte que el patrón puede ejecutarse lentamente, para que puedas simplificarlo. Esto es una precaución útil, no un bloqueo duro; la entrada aún se guarda<br>
+- Mientras habla realmente, Browsers Dictionary permite solo un breve tiempo total de procesamiento para todas las entradas de expresiones regulares en una sola pieza de voz. Si ese presupuesto se agota, cualquier entrada regex restante para esa pieza de voz se omite para que tu voz no se detenga<br>
+- Los tramos de texto extremadamente largos no se escanean en busca de reemplazos en absoluto, ya que escanearlos agregaría retraso sin beneficio significativo</p>
+</div>
+
+<div class="feature-item">
+<h3>Migración fluida desde configuraciones anteriores</h3>
+<br>
+<p>Browsers Dictionary busca automáticamente los datos de configuración dejados por versiones anteriores o el nombre anterior del complemento "Invisible", y los fusiona en su configuración actual la primera vez que se ejecuta. Los sitios y las entradas de un diseño anterior se copian sin sobrescribir nada que ya hayas configurado; si ya existe un archivo con el mismo nombre, la copia anterior se guarda como copia de seguridad en lugar de descartarse. Los archivos de sitios duplicados que terminan representando el mismo sitio se fusionan automáticamente, combinando las entradas duplicadas en una sola lista.</p>
+</div>
+
+</div>
+
+<br><br>
+<h2>Apóyame</h2>
+    <p>Si esta herramienta te ha facilitado la vida, considera impulsar la próxima actualización con una pequeña donación.</p>
+<br>
+<p>
+  <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Apóyame">
+  </a>
+</p>
+<br>
+<p>Tu apoyo significa el mundo. Construyamos algo grandioso juntos</p>
+<br>
+  <div class="footer-note">
+<p>&copy; 2026 Chai Chaimee NVDA Add-on Publicado bajo GNU GPL</p>
+</div>
+
+</div> <!-- End container -->
+</body>
+</html>
