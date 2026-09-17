@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Browsers Dictionary NVDA Add-on</title>
+<title>Extension Browsers Dictionary para NVDA</title>
 <style>
 body {
     font-family: Arial, sans-serif;
@@ -64,42 +64,50 @@ b {
 <div class="container">
 
 <div class="section">
-    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="Logo NVDA" class="nvda-logo">
     <h1>Browsers Dictionary</h1>
     <br>
-    <p style="text-align: center;">Votre dictionnaire de prononciation personnel pour chaque site web, lu exactement comme vous le souhaitez.</p>
+    <p style="text-align: center;">Votre propre dictionnaire de prononciation pour chaque site web — écoutez les pages comme vous le souhaitez.</p>
 </div>
 <br>
 <div class="section">
-    <p style="text-align: center;"><b>author:</b> chai chaimee</p>
-    <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/BrowsersDictionary</p>
+    <p style="text-align: center;"><b>Auteur :</b> chai chaimee</p>
+    <p style="text-align: center;"><b>URL :</b> <a href="https://github.com/chaichaimee/BrowsersDictionary">https://github.com/chaichaimee/BrowsersDictionary</a></p>
 </div>
 <br>
 
 <div class="section">
 <h2>Introduction</h2>
 <br>
-<p>Browsers Dictionary vous permet de créer un "dictionnaire de prononciation" personnalisé par site web pour la synthèse vocale de NVDA. Si un site utilise des mots, des abréviations ou du jargon que NVDA lit maladroitement, vous pouvez définir un modèle de texte ou d'expression régulière et un remplacement, et NVDA prononcera votre remplacement chaque fois que ce modèle apparaîtra sur cette page spécifique, sur l'ensemble du site web, ou sur n'importe quelle URL correspondant à votre propre modèle.</p>
+<p>Browsers Dictionary vous permet de créer votre propre <b>dictionnaire de prononciation par site web</b> pour NVDA. Contrairement au dictionnaire de prononciation intégré de NVDA, qui s'applique partout, cette extension vous permet d'associer des substitutions de mots et de phrases uniquement à des sites spécifiques — ainsi, une règle créée pour un site web ne s'appliquera jamais à un autre site ni à une autre application.</p>
 <br>
-<p>Le module complémentaire fonctionne automatiquement une fois configuré : il surveille discrètement quel onglet ou quelle page du navigateur est actif, et réécrit en temps réel la parole que NVDA est sur le point de prononcer, en fonction des règles que vous avez configurées pour le site actuel.</p>
+<p>Vous pouvez renommer des étiquettes confuses, raccourcir des textes meublants ou répétitifs, ou rendre muettes des phrases que vous ne voulez jamais entendre prononcées, le tout limité à la page ou au site où elles vous gênent. Les règles s'appliquent en direct pendant votre navigation et peuvent être créées à partir de correspondances en texte brut ou d'expressions régulières.</p>
+<br>
+<p>Navigateurs pris en charge : <b>Firefox, Chrome, Microsoft Edge, Brave, Opera</b> et <b>Internet Explorer</b>.</p>
 <br>
 <div class="note">
-<b>Vous passez d'Invisible ?</b><br>
-Browsers Dictionary est une version améliorée du module complémentaire "Invisible". Si vous avez actuellement Invisible installé, désinstallez-le simplement d'abord, puis installez Browsers Dictionary et continuez à l'utiliser immédiatement. Vous n'avez pas besoin de refaire vos configurations de sites : tous les paramètres de sites que vous aviez configurés dans Invisible sont automatiquement reportés dans Browsers Dictionary lors de sa première exécution.
+Cette extension fonctionne entièrement hors ligne. Elle ne transmet ni ne récupère aucune donnée sur le réseau — tous les dictionnaires sont stockés localement sur votre ordinateur.
 </div>
 </div>
 
 <div class="section">
-<h3>Raccourcis clavier</h3>
+<h2>Touches de raccourci</h2>
 <br>
 <div class="hotkey">
-<b>NVDA+Shift+W</b><br>
-Appui simple : Ouvrir les paramètres de Browsers Dictionary pour le site actuel<br>
-Appui double : Capturer l'URL de la page actuelle et ouvrir la boîte de dialogue Ajouter un nouveau site
+<b>Alt+Windows+B</b><br>
+Simple appui : Ouvrir les paramètres de Browsers Dictionary pour le site actuel<br>
+Double appui : Ajouter la page actuelle comme nouveau site<br>
+Triple appui : Modifier la configuration existante du site actuel
 </div>
 <br>
 <div class="tap-explanation">
-Appuyez une fois pour examiner ou modifier les entrées du dictionnaire déjà enregistrées pour la page sur laquelle vous vous trouvez actuellement. Appuyez deux fois rapidement, tout en ayant le focus dans votre navigateur, pour créer immédiatement une nouvelle entrée de site en utilisant l'URL de la page que vous consultez actuellement. Si NVDA ne peut pas détecter d'URL pour un double appui (par exemple, vous n'êtes pas dans un navigateur pris en charge), il vous dira "Impossible de capturer l'URL. Assurez-vous d'être dans un navigateur."
+<b>Comment fonctionne l'appui successif :</b> Appuyez sur la combinaison de touches une, deux ou trois fois rapidement (en une fraction de seconde). Attendre un peu plus longtemps entre deux appuis réinitialise le compteur, ainsi un appui lent sera toujours traité comme un simple appui.
+<br><br>
+<b>Un simple appui</b> ouvre toujours le dialogue principal des paramètres, affichant le site correspondant à votre page actuelle si l'un d'eux est déjà configuré, ou une nouvelle entrée prête à être remplie dans le cas contraire.
+<br><br>
+<b>Un double appui</b> est un raccourci pour enregistrer rapidement la page sur laquelle vous vous trouvez actuellement comme nouveau site. Cela nécessite que NVDA ait préalablement capturé l'URL de la page avec succès ; si ce n'est pas le cas, vous entendrez un message vous demandant de vous assurer que vous êtes dans un navigateur.
+<br><br>
+<b>Un triple appui</b> passe directement à la modification du site déjà configuré pour votre page actuelle. Si aucun site n'est encore configuré pour cette page, il vous sera demandé de faire un double appui d'abord pour en ajouter un.
 </div>
 </div>
 
@@ -108,79 +116,90 @@ Appuyez une fois pour examiner ou modifier les entrées du dictionnaire déjà e
 <br>
 
 <div class="feature-item">
-<h3>Suivi automatique et en direct des URL</h3>
+<h3>Dictionnaires de prononciation par site</h3>
 <br>
-<p>Browsers Dictionary garde une trace de la page sur laquelle vous vous trouvez sans que vous ayez à faire quoi que ce soit. Il met à jour son enregistrement de l'URL actuelle :</p>
+<p>Chaque site que vous ajoutez possède sa propre liste indépendante d'entrées de mots/phrases. Une entrée peut être :</p>
 <br>
-<p>- Lorsque vous basculez vers une fenêtre de navigateur (Firefox, Chrome, Edge, Brave, Opera ou Internet Explorer)<br>
-- Lorsqu'une page a fini de charger<br>
-- Lorsque le focus se déplace vers un nouvel élément, au maximum deux fois par seconde, afin de rester à jour sans surcharger le navigateur</p>
+<p><b>Un remplacement en texte brut</b> — toute occurrence exacte du motif est remplacée par votre texte de remplacement.<br>
+<b>Un remplacement par expression régulière</b> — pour une correspondance plus flexible basée sur des motifs.</p>
 <br>
-<p>Cette URL est ce que le module complémentaire utilise en arrière-plan pour décider quel ensemble d'entrées de dictionnaire s'applique à ce que vous lisez actuellement.</p>
-</div>
-
-<div class="feature-item">
-<h3>Remplacement de mots et de motifs par site</h3>
+<p>Laisser le champ de remplacement vide est un choix valide et délibéré — cela signifie "ne rien verbaliser" pour ce motif, exactement comme si vous laissiez un remplacement vide dans le dictionnaire de prononciation intégré de NVDA.</p>
 <br>
-<p>Pour chaque site que vous ajoutez, vous pouvez créer une liste d'entrées. Chaque entrée possède :</p>
-<br>
-<p>- Un <b>Motif</b> : le texte exact, ou une expression régulière, à rechercher<br>
-- Un <b>Remplacement</b> facultatif : ce que NVDA doit dire à la place. S'il est laissé vide, le texte correspondant est simplement supprimé de la parole<br>
-- Une case à cocher <b>Utiliser comme expression régulière</b>, pour la correspondance de motifs avancés</p>
-<br>
-<p>Chaque fois que NVDA s'apprête à prononcer du texte sur une page correspondante, Browsers Dictionary le vérifie par rapport à votre liste et substitue les correspondances avant que la parole ne soit prononcée. Les entrées en texte brut sont comparées en premier (les entrées les plus longues en premier, pour éviter les chevauchements partiels), suivies de vos expressions régulières.</p>
+<p><i>Exemple :</i> Sur un site où un bouton de discussion est annoncé comme "btn_send_msg_42", vous pouvez ajouter une entrée en texte brut le remplaçant par "Envoyer".</p>
 </div>
 
 <div class="feature-item">
 <h3>Trois façons de faire correspondre un site</h3>
 <br>
-<p>Lors de l'ajout ou de la modification d'un site, vous choisissez l'étendue de l'application de ses entrées de dictionnaire :</p>
+<p>Lors de l'ajout ou de la modification d'un site, vous choisissez la manière dont son adresse est comparée à la page sur laquelle vous vous trouvez :</p>
 <br>
-<p><b>Page unique uniquement</b> : les entrées s'appliquent uniquement à l'URL exacte que vous avez enregistrée.<br>
-<b>Ensemble du site web (domaine)</b> : les entrées s'appliquent à chaque page du même domaine, quel que soit le chemin spécifique.<br>
-<b>Expression régulière</b> : les entrées s'appliquent à toute URL correspondant à un motif que vous écrivez, vérifié à partir du début de l'adresse.</p>
+<p><b>Page unique seulement</b> — le dictionnaire ne s'applique que si l'URL correspond exactement. Idéal pour une page dont l'adresse ne change jamais.<br>
+<b>Site web entier (domaine)</b> — le dictionnaire s'applique n'importe où sur le même domaine, quel que soit le reste de l'adresse. C'est le choix par défaut et recommandé, car la plupart des sites utilisent des adresses uniques par page ou par session.<br>
+<b>Expression régulière</b> — le dictionnaire s'applique à toute URL qui correspond à votre motif depuis le début. Utile pour les sites ayant une structure d'URL prévisible que vous souhaitez cibler précisément.</p>
+</div>
+
+<div class="feature-item">
+<h3>Détection automatique du site actuel</h3>
+<br>
+<p>Browsers Dictionary suit l'adresse de la page que vous consultez actuellement en arrière-plan, afin de toujours savoir quel dictionnaire de site — le cas échéant — doit s'appliquer. Ce suivi est mis à jour :</p>
+<br>
+<p>- Lorsque vous basculez vers une fenêtre de navigateur.<br>
+- Lorsque le focus se déplace dans la page (vérifié au maximum deux fois par seconde, pour éviter tout traitement inutile).<br>
+- Au moment où une nouvelle page finit de se charger.</p>
+<br>
+<p>Vous n'avez jamais besoin de rien faire pour déclencher cela — cela se produit automatiquement pendant que vous naviguez.</p>
+</div>
+
+<div class="feature-item">
+<h3>Correspondance à travers les segments de parole fractionnés</h3>
+<br>
+<p>NVDA annonce parfois une seule ligne comme plusieurs segments de parole distincts — par exemple, le rôle d'un lien, le texte du lien lui-même, et le texte qui le suit. Browsers Dictionary est conçu pour intercepter les motifs qui chevauchent précisément ce type de frontière, de sorte qu'une phrase comme "messages jusqu'à ..." puisse toujours être détectée et remplacée même si "messages" est le texte d'un lien et que le reste suit immédiatement.</p>
+<br>
+<p>Les passages parlés très longs (plus de 20 000 caractères) sont totalement ignorés par l'analyse, car chercher des motifs dans de tels blocs entraîne un ralentissement perceptible sans bénéfice réel.</p>
+</div>
+
+<div class="feature-item">
+<h3>Vérifications de sécurité des expressions régulières</h3>
+<br>
+<p>Chaque fois que vous enregistrez une expression régulière — que ce soit pour une entrée de mot ou pour le motif d'URL d'un site — Browsers Dictionary la vérifie de deux manières :</p>
+<br>
+<p><b>Étape 1 — Vérification de validité :</b> le motif doit pouvoir être compilé en une expression régulière valide, sinon l'enregistrement est refusé avec une explication.<br>
+<b>Étape 2 — Vérification de motif infini :</b> le motif est comparé à une structure connue qui entraîne généralement une exécution extrêmement lente des expressions régulières sur certains textes (groupes imbriqués répétés tels que <code>(x+)+</code>). S'il correspond à cette structure, vous entendrez un message d'avertissement — mais le motif sera tout de même enregistré, car cette vérification ne peut pas garantir qu'un motif est réellement dangereux, mais seulement qu'il ressemble à ceux qui peuvent l'être.</p>
+<br>
+<div class="note">
+Comme protection supplémentaire pendant votre navigation, toutes les entrées de mots en expression régulière pour une même phrase parlée partagent un budget temps combiné de 0,1 seconde. Si ce budget est épuisé, toutes les entrées en expression régulière restantes pour cette phrase sont ignorées pour cette occurrence, afin qu'un motif lourd ne ralentisse pas de manière perceptible la synthèse vocale.
+</div>
 </div>
 
 <div class="feature-item">
 <h3>Gestion des sites et des entrées</h3>
 <br>
-<p>La boîte de dialogue Paramètres (ouverte par un simple appui de NVDA+Shift+W) contient une liste de sites et, pour le site sélectionné, une liste d'entrées. De là, vous pouvez :</p>
+<p>Le dialogue des paramètres liste tous vos sites configurés d'un côté et les entrées du dictionnaire du site actuel de l'autre. À partir d'ici, vous pouvez :</p>
 <br>
-<p>- <b>Ajouter</b>, <b>Modifier</b> ou <b>Supprimer</b> une entrée de mot ou de motif, avec confirmation avant suppression<br>
-- Ouvrir un menu contextuel (ou appuyer sur Suppr) sur un site ou une entrée pour des actions rapides d'édition/suppression<br>
-- <b>Modifier le site</b> ou <b>Supprimer le site</b> directement depuis le menu contextuel de la liste des sites<br>
-- Annuler une modification en cours et revenir à l'ajout de nouvelles entrées</p>
-<br>
-<p>L'ajout d'un nouveau site ouvre une boîte de dialogue dédiée où vous définissez son nom d'affichage, son URL et son mode de correspondance ; l'enregistrement d'un nouveau site rouvre immédiatement la boîte de dialogue principale des paramètres pour ce site afin que vous puissiez commencer à ajouter des entrées tout de suite.</p>
+<p>- Ajouter, modifier ou supprimer une entrée de dictionnaire (également accessible via la touche Suppr ou un menu contextuel par clic droit sur la liste des entrées).<br>
+- Modifier ou supprimer un site entier (également accessible via la touche Suppr ou un menu contextuel par clic droit sur la liste des sites).<br>
+- Importer une liste d'entrées depuis un fichier JSON directement dans le site actuellement sélectionné.</p>
 </div>
 
 <div class="feature-item">
-<h3>Importer des entrées à partir d'un fichier</h3>
+<h3>Importation d'entrées depuis un fichier</h3>
 <br>
-<p>Vous pouvez charger en masse des entrées dans le site actuellement sélectionné en utilisant <b>Importer depuis un fichier...</b>. Browsers Dictionary lit un fichier JSON contenant une liste "words", où chaque entrée peut être une simple chaîne (traitée comme un remplacement de texte simple) ou un objet complet avec des paramètres de motif, de remplacement et d'expression régulière. Après votre confirmation, il indique combien d'entrées ont été ajoutées et combien ont été ignorées, par exemple parce qu'elles existaient déjà pour ce site.</p>
+<p>Vous pouvez charger en masse des entrées de dictionnaire dans le site actuellement sélectionné à partir d'un fichier JSON. Le fichier doit contenir une liste "words" contenant soit des valeurs en texte brut, soit des entrées plus complètes avec un motif, un indicateur d'expression régulière optionnel et un remplacement optionnel.</p>
+<br>
+<p>Les entrées mal formées sont ignorées au lieu d'arrêter tout l'importation, et on vous indique exactement combien d'entrées ont été ajoutées par rapport à celles ignorées une fois le traitement terminé. Les expressions régulières importées passent par les mêmes vérifications de validité et de motif infini décrites ci-dessus.</p>
 </div>
 
 <div class="feature-item">
-<h3>Avertissements de sécurité Regex et budget de temps</h3>
+<h3>Migration automatique de la configuration</h3>
 <br>
-<p>Pour vous protéger contre des motifs qui pourraient figer ou ralentir la parole :</p>
-<br>
-<p>- Lorsque vous enregistrez une expression régulière qui semble pouvoir provoquer un "retour arrière catastrophique" incontrôlé (certains groupes répétés imbriqués), NVDA vous avertit que le motif peut s'exécuter lentement, afin que vous puissiez le simplifier. C'est une mise en garde utile, pas un blocage strict ; l'entrée est quand même enregistrée<br>
-- Pendant la lecture réelle, Browsers Dictionary n'autorise qu'un bref temps de traitement total pour toutes les entrées d'expression régulière sur un seul morceau de parole. Si ce budget est épuisé, toutes les entrées regex restantes pour ce morceau de parole sont ignorées afin que votre parole ne soit pas bloquée<br>
-- Les portions de texte extrêmement longues ne sont pas du tout analysées à la recherche de remplacements, car les analyser ajouterait un délai sans avantage significatif</p>
-</div>
-
-<div class="feature-item">
-<h3>Migration transparente à partir de configurations plus anciennes</h3>
-<br>
-<p>Browsers Dictionary vérifie automatiquement les données de configuration laissées par les versions précédentes ou l'ancien nom de module complémentaire "Invisible", et les fusionne dans sa configuration actuelle lors de sa première exécution. Les sites et les entrées d'une ancienne disposition sont copiés sans écraser rien de ce que vous avez déjà configuré ; si un fichier portant le même nom existe déjà, l'ancienne copie est conservée comme sauvegarde au lieu d'être supprimée. Les fichiers de sites en double qui finissent par représenter le même site sont automatiquement fusionnés, les entrées en double étant combinées en une seule liste.</p>
+<p>Si Browsers Dictionary détecte des dictionnaires enregistrés par une ancienne version de l'extension (y compris une version publiée sous l'ancien nom de cette extension), il les copie automatiquement vers l'emplacement de configuration actuel la première fois qu'il démarre. Rien n'est perdu même si des entrées existent déjà aux deux endroits — les sites correspondants voient leurs listes de mots fusionnées au lieu qu'une copie n'écrase l'autre.</p>
 </div>
 
 </div>
 
 <br><br>
 <h2>Me soutenir</h2>
-    <p>Si cet outil vous a simplifié la vie, envisagez d'alimenter la prochaine mise à jour avec un petit don.</p>
+    <p>Si cet outil vous a facilité la vie, pensez à alimenter la prochaine mise à jour par un petit don.</p>
 <br>
 <p>
   <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
@@ -188,10 +207,10 @@ Appuyez une fois pour examiner ou modifier les entrées du dictionnaire déjà e
   </a>
 </p>
 <br>
-<p>Votre soutien compte énormément. Construyons quelque chose de formidable ensemble</p>
+<p>Votre soutien compte énormément. Construisons quelque chose de grand ensemble</p>
 <br>
   <div class="footer-note">
-<p>&copy; 2026 Chai Chaimee NVDA Add-on Publié sous GNU GPL</p>
+<p>&copy; 2026 Chai Chaimee Extension NVDA Publié sous licence GNU GPL</p>
 </div>
 
 </div> <!-- End container -->

@@ -67,39 +67,47 @@ b {
     <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
     <h1>Browsers Dictionary</h1>
     <br>
-    <p style="text-align: center;">Your personal pronunciation dictionary for every website, spoken exactly the way you want it.</p>
+    <p style="text-align: center;">Your own speech dictionary for every website — hear pages the way you want to hear them.</p>
 </div>
 <br>
 <div class="section">
     <p style="text-align: center;"><b>author:</b> chai chaimee</p>
-    <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/BrowsersDictionary</p>
+    <p style="text-align: center;"><b>url:</b> <a href="https://github.com/chaichaimee/BrowsersDictionary">https://github.com/chaichaimee/BrowsersDictionary</a></p>
 </div>
 <br>
 
 <div class="section">
 <h2>Introduction</h2>
 <br>
-<p>Browsers Dictionary lets you build a custom, per-website "pronunciation dictionary" for NVDA speech. If a site uses words, abbreviations, or jargon that NVDA reads awkwardly, you can define a text or regular-expression pattern and a replacement, and NVDA will speak your replacement instead whenever that pattern appears on that specific page, on that whole website, or on any URL matching your own pattern.</p>
+<p>Browsers Dictionary lets you build your own <b>per-website speech dictionary</b> for NVDA. Unlike NVDA's built-in speech dictionary, which applies everywhere, this add-on lets you attach word and phrase substitutions to specific sites only — so a rule you create for one website never leaks into another website, or into any other application.</p>
 <br>
-<p>The add-on works automatically once set up: it silently watches which browser tab or page is active, and rewrites the speech NVDA is about to say in real time, based on the rules you configured for the current site.</p>
+<p>You can rename confusing labels, shorten long or repetitive text, or silence phrases you never want spoken, all scoped to just the page or site where they bother you. Rules apply live as you browse, and can be built from either plain text matches or regular expressions.</p>
+<br>
+<p>Supported browsers: <b>Firefox, Chrome, Microsoft Edge, Brave, Opera,</b> and <b>Internet Explorer</b>.</p>
 <br>
 <div class="note">
-<b>Upgrading from Invisible?</b><br>
-Browsers Dictionary is an enhanced version of the "Invisible" add-on. If you currently have Invisible installed, simply uninstall it first, then install Browsers Dictionary and keep using it right away. You do not need to redo any of your site setups: all the site settings you previously configured in Invisible are automatically carried over into Browsers Dictionary the first time it runs.
+This add-on works entirely offline. It does not send or fetch any data over the network — all dictionaries are stored locally on your computer.
 </div>
 </div>
 
 <div class="section">
-<h3>Hot Keys</h3>
+<h2>Hot Keys</h2>
 <br>
 <div class="hotkey">
-<b>NVDA+Shift+W</b><br>
+<b>Alt+Windows+B</b><br>
 Single Tap : Open Browsers Dictionary Settings for the current site<br>
-Double Tap : Capture the current page's URL and open the Add New Site dialog
+Double Tap : Add the current page as a new site<br>
+Triple Tap : Edit the current site's existing configuration
 </div>
 <br>
 <div class="tap-explanation">
-Tap once to review or edit the dictionary entries already saved for the page you are currently on. Tap twice, quickly, while focused in your browser to immediately create a new site entry using the URL of the page you are currently viewing. If NVDA cannot detect a URL for a double tap (for example, you are not in a supported browser), it will tell you "Cannot capture URL. Make sure you are in a browser."
+<b>How tapping works:</b> Tap the key combination once, twice, or three times in quick succession (within a fraction of a second of each other). Waiting slightly longer between presses restarts the count, so a single slow press is always treated as a single tap.
+<br><br>
+<b>Single tap</b> always opens the main Settings dialog, showing the site matching your current page if one is already configured, or a ready-to-fill new entry if not.
+<br><br>
+<b>Double tap</b> is a shortcut to quickly register the page you are currently on as a new site. It requires NVDA to have successfully captured the page's URL first; if it hasn't, you'll hear a message asking you to make sure you're in a browser.
+<br><br>
+<b>Triple tap</b> jumps straight to editing the site already configured for your current page. If no site is configured yet for that page, you'll be told to double-tap first to add one.
 </div>
 </div>
 
@@ -108,72 +116,83 @@ Tap once to review or edit the dictionary entries already saved for the page you
 <br>
 
 <div class="feature-item">
-<h3>Automatic, Live URL Tracking</h3>
+<h3>Per-Site Speech Dictionaries</h3>
 <br>
-<p>Browsers Dictionary keeps track of the page you are on without you having to do anything. It updates its record of the current URL:</p>
+<p>Each site you add gets its own independent list of word/phrase entries. An entry can either be:</p>
 <br>
-<p>- When you switch to a browser window (Firefox, Chrome, Edge, Brave, Opera, or Internet Explorer)<br>
-- When a page finishes loading<br>
-- When focus moves to a new element, at most twice per second, so it stays current without overloading the browser</p>
+<p><b>A plain text replacement</b> — any exact occurrence of the pattern is swapped for your replacement text.<br>
+<b>A regular expression replacement</b> — for more flexible, pattern-based matching.</p>
 <br>
-<p>This URL is what the add-on uses behind the scenes to decide which set of dictionary entries applies to what you are currently reading.</p>
-</div>
-
-<div class="feature-item">
-<h3>Per-Site Word and Pattern Replacement</h3>
+<p>Leaving the replacement field blank is a valid, deliberate choice — it means "speak nothing" for that pattern, exactly like leaving a replacement blank in NVDA's own built-in speech dictionary.</p>
 <br>
-<p>For each site you add, you can create a list of entries. Each entry has:</p>
-<br>
-<p>- A <b>Pattern</b>: the exact text, or a regular expression, to look for<br>
-- An optional <b>Replacement</b>: what NVDA should say instead. If left blank, the matched text is simply removed from speech<br>
-- A <b>Use as regular expression</b> checkbox, for advanced pattern matching</p>
-<br>
-<p>Whenever NVDA is about to speak text on a matching page, Browsers Dictionary checks it against your list and substitutes matches before the speech is spoken. Plain-text entries are matched first (longest entries first, to avoid partial overlaps), followed by your regular expressions.</p>
+<p><i>Example:</i> On a site where a chat button is announced as "btn_send_msg_42", you could add a plain text entry replacing it with "Send".</p>
 </div>
 
 <div class="feature-item">
 <h3>Three Ways to Match a Site</h3>
 <br>
-<p>When adding or editing a site, you choose how broadly its dictionary entries should apply:</p>
+<p>When adding or editing a site, you choose how its address is matched against the page you're on:</p>
 <br>
-<p><b>Single page only</b>: entries apply only to the exact URL you saved.<br>
-<b>Whole website (domain)</b>: entries apply to every page on the same domain, regardless of the specific path.<br>
-<b>Regular expression</b>: entries apply to any URL that matches a pattern you write, checked from the start of the address.</p>
+<p><b>Single page only</b> — the dictionary applies only when the URL is an exact match. Best for a page whose address never changes.<br>
+<b>Whole website (domain)</b> — the dictionary applies anywhere on the same domain, regardless of the rest of the address. This is the default and recommended choice, since most sites use unique per-page or per-session addresses.<br>
+<b>Regular expression</b> — the dictionary applies to any URL that matches your pattern from the start. Useful for sites with a predictable URL structure you want to target precisely.</p>
+</div>
+
+<div class="feature-item">
+<h3>Automatic Current-Site Detection</h3>
+<br>
+<p>Browsers Dictionary keeps track of the address of the page you're currently viewing in the background, so it always knows which site's dictionary — if any — should apply. This tracking updates:</p>
+<br>
+<p>- When you switch to a browser window.<br>
+- When focus moves within the page (checked no more than twice a second, to avoid unnecessary work).<br>
+- The moment a new page finishes loading.</p>
+<br>
+<p>You never need to do anything to trigger this — it happens automatically as you browse.</p>
+</div>
+
+<div class="feature-item">
+<h3>Matching Across Split Speech</h3>
+<br>
+<p>NVDA sometimes announces a single line as several separate pieces of speech — for example, a link's role, the link's own text, and the text that follows it. Browsers Dictionary is designed to catch patterns that span exactly this kind of boundary, so a phrase like "messages until ..." can still be matched and replaced even when "messages" is a link's text and the rest follows immediately after it.</p>
+<br>
+<p>Very long spoken passages (over 20,000 characters) are skipped from scanning entirely, since matching such large chunks adds noticeable cost for essentially no realistic benefit.</p>
+</div>
+
+<div class="feature-item">
+<h3>Regular Expression Safety Checks</h3>
+<br>
+<p>Whenever you save a regular expression — whether for a word entry or for a site's own URL pattern — Browsers Dictionary checks it in two ways:</p>
+<br>
+<p><b>Step 1 — Validity check:</b> the pattern must actually compile as a valid regular expression, or saving is refused with an explanation.<br>
+<b>Step 2 — Runaway pattern check:</b> the pattern is compared against a known "shape" that commonly causes regular expressions to run extremely slowly on certain text (repeated nested groups such as <code>(x+)+</code>). If it matches this shape, you'll hear a caution message — but the pattern is still saved, since this check cannot guarantee a pattern is actually unsafe, only that it resembles ones that can be.</p>
+<br>
+<div class="note">
+As an extra safeguard while you browse, all the regex word entries for a single spoken phrase share a combined time budget of 0.1 seconds. If that budget runs out, any remaining regex entries for that phrase are skipped for that occurrence, so one heavy pattern cannot noticeably delay your speech.
+</div>
 </div>
 
 <div class="feature-item">
 <h3>Managing Sites and Entries</h3>
 <br>
-<p>The Settings dialog (opened with a single tap of NVDA+Shift+W) contains a Site List and, for the selected site, an Entries list. From here you can:</p>
+<p>The Settings dialog lists all your configured sites on one side and the current site's dictionary entries on the other. From here you can:</p>
 <br>
-<p>- <b>Add</b>, <b>Edit</b>, or <b>Remove</b> a word or pattern entry, with confirmation before removal<br>
-- Open a context menu (or press Delete) on a site or an entry for quick Edit/Remove actions<br>
-- <b>Edit Site</b> or <b>Remove Site</b> directly from the Site List's context menu<br>
-- Cancel an in-progress edit and return to adding new entries</p>
-<br>
-<p>Adding a new site opens a dedicated dialog where you set its display name, URL, and matching mode; saving a new site immediately reopens the main Settings dialog for that site so you can start adding entries right away.</p>
+<p>- Add, edit, or remove a dictionary entry (also reachable via the Delete key or a right-click context menu on the entries list).<br>
+- Edit or remove an entire site (also reachable via the Delete key or a right-click context menu on the site list).<br>
+- Import a list of entries from a JSON file directly into the currently selected site.</p>
 </div>
 
 <div class="feature-item">
-<h3>Import Entries from a File</h3>
+<h3>Importing Entries From a File</h3>
 <br>
-<p>You can bulk-load entries into the currently selected site using <b>Import from file...</b>. Browsers Dictionary reads a JSON file containing a "words" list, where each entry can be a plain string (treated as a simple text replacement) or a full object with pattern, replacement, and regex settings. After you confirm, it reports how many entries were added and how many were skipped, for example because they already existed for that site.</p>
+<p>You can bulk-load dictionary entries into the currently selected site from a JSON file. The file needs a "words" list containing either plain text values or fuller entries with a pattern, an optional regex flag, and an optional replacement.</p>
+<br>
+<p>Malformed entries are skipped rather than stopping the whole import, and you're told exactly how many entries were added versus skipped once it finishes. Imported regular expressions go through the same validity and runaway-pattern checks described above.</p>
 </div>
 
 <div class="feature-item">
-<h3>Regex Safety Warnings and Time Budget</h3>
+<h3>Automatic Configuration Migration</h3>
 <br>
-<p>To protect you from patterns that could freeze or slow down speech:</p>
-<br>
-<p>- When you save a regular expression that looks like it could cause runaway "catastrophic backtracking" (certain nested repeating groups), NVDA warns you that the pattern may run slowly, so you can simplify it. This is a helpful caution, not a hard block; the entry is still saved<br>
-- While actually speaking, Browsers Dictionary allows only a brief total processing time for all regular-expression entries on a single piece of speech. If that budget runs out, any remaining regex entries for that piece of speech are skipped so your speech is not held up<br>
-- Extremely long stretches of text are not scanned for replacements at all, since scanning them would add delay without meaningful benefit</p>
-</div>
-
-<div class="feature-item">
-<h3>Seamless Migration from Older Configurations</h3>
-<br>
-<p>Browsers Dictionary automatically checks for configuration data left behind by earlier versions or the previous "Invisible" add-on name, and merges it into its current configuration the first time it runs. Sites and entries from an older layout are copied in without overwriting anything you have already set up; if a file with the same name already exists, the older copy is kept as a backup instead of being discarded. Duplicate site files that end up representing the same site are automatically merged, with duplicate entries combined into one list.</p>
+<p>If Browsers Dictionary detects dictionaries saved by an older version of the add-on (including one released under this add-on's previous name), it automatically copies them into the current configuration location the first time it starts. Nothing is lost even if entries already exist in both places — matching sites have their word lists merged together instead of one copy overwriting the other.</p>
 </div>
 
 </div>

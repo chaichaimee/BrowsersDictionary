@@ -64,42 +64,50 @@ b {
 <div class="container">
 
 <div class="section">
-    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA Logo" class="nvda-logo">
+    <img src="https://www.nvaccess.org/files/nvda/documentation/userGuide/images/nvda.ico" alt="NVDA-Logo" class="nvda-logo">
     <h1>Browsers Dictionary</h1>
     <br>
-    <p style="text-align: center;">Dein persönliches Aussprachewörterbuch für jede Website, genau so gesprochen, wie du es möchtest.</p>
+    <p style="text-align: center;">Ihr eigenes Sprachwörterbuch für jede Webseite — hören Sie Webseiten so, wie Sie es möchten.</p>
 </div>
 <br>
 <div class="section">
-    <p style="text-align: center;"><b>author:</b> chai chaimee</p>
-    <p style="text-align: center;"><b>url:</b> https://github.com/chaichaimee/BrowsersDictionary</p>
+    <p style="text-align: center;"><b>Autor:</b> chai chaimee</p>
+    <p style="text-align: center;"><b>URL:</b> <a href="https://github.com/chaichaimee/BrowsersDictionary">https://github.com/chaichaimee/BrowsersDictionary</a></p>
 </div>
 <br>
 
 <div class="section">
-<h2>Einleitung</h2>
+<h2>Einführung</h2>
 <br>
-<p>Mit Browsers Dictionary kannst du ein benutzerdefiniertes „Aussprachewörterbuch“ pro Website für die NVDA-Sprachausgabe erstellen. Wenn eine Website Wörter, Abkürzungen oder Fachbegriffe verwendet, die NVDA unnatürlich vorliest, kannst du ein Text- oder Reguläres-Ausdruck-Muster sowie einen Ersatz definieren. NVDA liest dann deinen Ersatz vor, wann immer dieses Muster auf dieser spezifischen Seite, auf der gesamten Website oder auf einer beliebigen URL erscheint, die deinem Muster entspricht.</p>
+<p>Mit Browsers Dictionary können Sie Ihr eigenes <b>webseitenspezifisches Sprachwörterbuch</b> für NVDA erstellen. Im Gegensatz zum integrierten Sprachwörterbuch von NVDA, das überall gilt, können Sie mit dieser Erweiterung Wort- und Phrasenersetzungen ausschließlich auf bestimmte Webseiten anwenden — so wird eine Regel, die Sie für eine Webseite erstellen, niemals auf eine andere Webseite oder in eine andere Anwendung übertragen.</p>
 <br>
-<p>Die Erweiterung funktioniert nach der Einrichtung automatisch: Sie überwacht im Hintergrund, welcher Browser-Tab oder welche Seite aktiv ist, und passt die von NVDA auszugebende Sprache in Echtzeit basierend auf den für die aktuellen Website konfigurierten Regeln an.</p>
+<p>Sie können verwirrende Beschriftungen umbenennen, lange oder sich wiederholende Texte kürzen oder Phrasen stummschalten, die Sie nie gesprochen hören möchten, und zwar genau bezogen auf die Seite oder Website, auf der sie störend sind. Die Regeln werden beim Surfen live angewendet und können entweder aus einfachen Textübereinstimmungen oder regulären Ausdrücken erstellt werden.</p>
+<br>
+<p>Unterstützte Browser: <b>Firefox, Chrome, Microsoft Edge, Brave, Opera</b> und <b>Internet Explorer</b>.</p>
 <br>
 <div class="note">
-<b>Upgrade von Invisible?</b><br>
-Browsers Dictionary ist eine erweiterte Version der „Invisible“-Erweiterung. Wenn du Invisible derzeit installiert hast, deinstalliere es einfach zuerst, installiere dann Browsers Dictionary und verwende es sofort weiter. Du musst deine Website-Einrichtungen nicht neu vornehmen: Alle Website-Einstellungen, die du zuvor in Invisible konfiguriert hast, werden beim ersten Start automatisch in Browsers Dictionary übernommen.
+Diese Erweiterung funktioniert vollständig offline. Es werden keine Daten über das Netzwerk gesendet oder abgerufen — alle Wörterbücher werden lokal auf Ihrem Computer gespeichert.
 </div>
 </div>
 
 <div class="section">
-<h3>Tastenkombinationen</h3>
+<h2>Tastenkombinationen</h2>
 <br>
 <div class="hotkey">
-<b>NVDA+Shift+W</b><br>
-Einfaches Tippen : Öffnet die Browsers Dictionary-Einstellungen für die aktuelle Website<br>
-Doppeltes Tippen : Erfasst die URL der aktuellen Seite und öffnet den Dialog „Neue Website hinzufügen“
+<b>Alt+Windows+B</b><br>
+Einmal drücken: Einstellungen von Browsers Dictionary für die aktuelle Webseite öffnen<br>
+Zweimal drücken: Die aktuelle Seite als neue Webseite hinzufügen<br>
+Dreimal drücken: Die bestehende Konfiguration der aktuellen Webseite bearbeiten
 </div>
 <br>
 <div class="tap-explanation">
-Einmal tippen, um die bereits für die aktuelle Seite gespeicherten Wörterbucheinträge zu überprüfen oder zu bearbeiten. Zweimal schnell tippen, während der Fokus im Browser liegt, um sofort einen neuen Website-Eintrag mit der URL der aktuell angezeigten Seite zu erstellen. Wenn NVDA keine URL für einen Doppeltipp erkennen kann (z. B. weil du dich in keinem unterstützten Browser befindest), wird die Meldung ausgegeben: „URL kann nicht erfasst werden. Stelle sicher, dass du dich in einem Browser befindest.“
+<b>Funktionsweise des mehrmaligen Drückens:</b> Drücken Sie die Tastenkombination schnell hintereinander ein-, zwei- oder dreimal (innerhalb eines Bruchteils einer Sekunde). Wenn Sie zwischen den Tastenanschlägen etwas länger warten, wird die Zählung zurückgesetzt, sodass ein einzelner, langsamer Tastendruck immer als einzelnes Drücken gewertet wird.
+<br><br>
+<b>Einmal drücken</b> öffnet immer den Haupt-Einstellungsdialog. Es zeigt die Webseite an, die Ihrer aktuellen Seite entspricht, falls eine bereits konfiguriert ist, oder einen ausfüllbaren neuen Eintrag, falls nicht.
+<br><br>
+<b>Zweimal drücken</b> ist ein Tastenkürzel, um die Seite, auf der Sie sich gerade befinden, schnell als neue Webseite zu registrieren. Hierfür muss NVDA die URL der Seite zuvor erfolgreich erfasst haben; Ist dies nicht der Fall, hören Sie eine Meldung, die Sie auffordert, sicherzustellen, dass Sie sich in einem Browser befinden.
+<br><br>
+<b>Dreimal drücken</b> springt direkt zum Bearbeiten der Webseite, die bereits für Ihre aktuelle Seite konfiguriert ist. Wenn für diese Seite noch keine Webseite konfiguriert ist, werden Sie aufgefordert, zuerst zweimal zu drücken, um eine hinzuzufügen.
 </div>
 </div>
 
@@ -108,90 +116,101 @@ Einmal tippen, um die bereits für die aktuelle Seite gespeicherten Wörterbuche
 <br>
 
 <div class="feature-item">
-<h3>Automatische Live-URL-Verfolgung</h3>
+<h3>Webseitenspezifische Sprachwörterbücher</h3>
 <br>
-<p>Browsers Dictionary verfolgt die Seite, auf der du dich befindest, ohne dass du etwas tun musst. Die Aufzeichnung der aktuellen URL wird aktualisiert:</p>
+<p>Jede hinzugefügte Webseite erhält ihre eigene unabhängige Liste von Wort-/Phraseneinträgen. Ein Eintrag kann entweder sein:</p>
 <br>
-<p>- Wenn du zu einem Browserfenster wechselst (Firefox, Chrome, Edge, Brave, Opera oder Internet Explorer)<br>
-- Wenn das Laden einer Seite abgeschlossen ist<br>
-- Wenn sich der Fokus auf ein neues Element bewegt, höchstens zweimal pro Sekunde, damit es aktuell bleibt, ohne den Browser zu überlasten</p>
+<p><b>Eine einfache Textersetzung</b> — jedes genaue Vorkommen des Musters wird durch Ihren Ersetzungstext ersetzt.<br>
+<b>Eine Ersetzung durch reguläre Ausdrücke</b> — für eine flexiblere, musterbasierte Ersetzung.</p>
 <br>
-<p>Diese URL verwendet die Erweiterung im Hintergrund, um zu bestimmen, welcher Satz von Wörterbucheinträgen auf das zutrifft, was du gerade liest.</p>
+<p>Das Ersetzungsfeld leer zu lassen ist eine gültige, bewusste Entscheidung — es bedeutet "nichts sprechen" für dieses Muster, genau wie das Leergelassene Ersetzungsfeld im integrierten Sprachwörterbuch von NVDA.</p>
+<br>
+<p><i>Beispiel:</i> Auf einer Webseite, auf der ein Chat-Schalter als "btn_send_msg_42" angesagt wird, könnten Sie einen einfachen Texteintrag hinzufügen, der ihn durch "Senden" ersetzt.</p>
 </div>
 
 <div class="feature-item">
-<h3>Wort- und Musteraustausch pro Website</h3>
+<h3>Drei Möglichkeiten zur Erkennung einer Webseite</h3>
 <br>
-<p>Für jede hinzugefügte Website kannst du eine Liste von Einträgen erstellen. Jeder Eintrag hat:</p>
+<p>Beim Hinzufügen oder Bearbeiten einer Webseite wählen Sie aus, wie deren Adresse mit der Seite verglichen wird, auf der Sie sich befinden:</p>
 <br>
-<p>- Ein <b>Muster</b>: den genauen Text oder einen regulären Ausdruck, nach dem gesucht werden soll<br>
-- Einen optionalen <b>Ersatz</b>: was NVDA stattdessen sagen soll. Wenn er leer bleibt, wird der gefundene Text einfach aus der Sprachausgabe entfernt<br>
-- Ein Kontrollkästchen <b>Als regulären Ausdruck verwenden</b> für fortgeschrittenes Musterabgleichen</p>
-<br>
-<p>Wann immer NVDA Text auf einer passenden Seite vorliest, prüft Browsers Dictionary diesen anhand deiner Liste und ersetzt Übereinstimmungen, bevor die Sprachausgabe erfolgt. Plaintext-Einträge werden zuerst abgeglichen (längste Einträge zuerst, um partielle Überschneidungen zu vermeiden), gefolgt von deinen regulären Ausdrücken.</p>
+<p><b>Nur Einzelseite</b> — das Wörterbuch gilt nur, wenn die URL exakt übereinstimmt. Am besten für eine Seite, deren Adresse sich nie ändert.<br>
+<b>Gesamte Website (Domain)</b> — das Wörterbuch gilt überall auf derselben Domain, unabhängig vom Rest der Adresse. Dies ist die Standardeinstellung und die empfohlene Wahl, da die meisten Webseiten eindeutige Adressen pro Seite oder Sitzung verwenden.<br>
+<b>Regulärer Ausdruck</b> — das Wörterbuch gilt für jede URL, die von Anfang an Ihrem Muster entspricht. Nützlich für Webseiten mit einer vorhersehbaren URL-Struktur, die Sie präzise ansteuern möchten.</p>
 </div>
 
 <div class="feature-item">
-<h3>Drei Wege zum Abgleichen einer Website</h3>
+<h3>Automatische Erkennung der aktuellen Webseite</h3>
 <br>
-<p>Beim Hinzufügen oder Bearbeiten einer Website legst du fest, wie breit die Wörterbucheinträge gelten sollen:</p>
+<p>Browsers Dictionary verfolgt die Adresse der Seite, die Sie gerade betrachten, im Hintergrund, sodass es immer weiß, welches Wörterbuch — falls vorhanden — angewendet werden soll. Diese Verfolgung wird aktualisiert:</p>
 <br>
-<p><b>Nur einzelne Seite</b>: Einträge gelten nur für die genaue URL, die du gespeichert hast.<br>
-<b>Gesamte Website (Domain)</b>: Einträge gelten für jede Seite auf derselben Domain, unabhängig vom spezifischen Pfad.<br>
-<b>Regulärer Ausdruck</b>: Einträge gelten für jede URL, die einem von dir geschriebenen Muster entspricht, geprüft ab dem Anfang der Adresse.</p>
+<p>- Wenn Sie zu einem Browserfenster wechseln.<br>
+- Wenn sich der Fokus innerhalb der Seite bewegt (höchstens zweimal pro Sekunde überprüft, um unnötige Belastung zu vermeiden).<br>
+- In dem Moment, in dem das Laden einer neuen Seite abgeschlossen ist.</p>
+<br>
+<p>Sie müssen nichts tun, um dies auszulösen — es geschieht automatisch beim Surfen.</p>
 </div>
 
 <div class="feature-item">
-<h3>Verwaltung von Websites und Einträgen</h3>
+<h3>Mustererkennung über getrennte Sprachausgaben hinweg</h3>
 <br>
-<p>Der Einstellungsdialog (geöffnet durch einmaliges Tippen von NVDA+Shift+W) enthält eine Websitelist und für die ausgewählte Website eine Eintragsliste. Von hier aus kannst du:</p>
+<p>NVDA sagt manchmal eine einzelne Zeile als mehrere getrennte Sprachausgaben an — zum Beispiel den Schaltertyp oder Linktyp, den Text des Links selbst und den darauffolgenden Text. Browsers Dictionary ist darauf ausgelegt, Muster zu erfassen, die genau über diese Grenzen hinweg verlaufen, sodass eine Phrase wie "Nachrichten bis ..." immer noch erkannt und ersetzt werden kann, selbst wenn "Nachrichten" der Text eines Links ist und der Rest direkt darauf folgt.</p>
 <br>
-<p>- Ein Wort- oder Mustereintrag <b>Hinzufügen</b>, <b>Bearbeiten</b> oder <b>Entfernen</b>, mit Bestätigung vor dem Entfernen<br>
-- Ein Kontextmenü öffnen (oder Entf drücken) auf einer Website oder einem Eintrag für schnelle Bearbeiten-/Entfernen-Aktionen<br>
-- <b>Website bearbeiten</b> oder <b>Website entfernen</b> direkt aus dem Kontextmenü der Websitelist<br>
-- Eine laufende Bearbeitung abbrechen und zum Hinzufügen neuer Einträge zurückkehren</p>
-<br>
-<p>Das Hinzufügen einer neuen Website öffnet einen dedizierten Dialog, in dem du Anzeigename, URL und Abgleichsmodus festlegst; das Speichern einer neuen Website öffnet sofort den Haupt-Einstellungsdialog für diese Website erneut, sodass du sofort mit dem Hinzufügen von Einträgen beginnen kannst.</p>
+<p>Sehr lange gesprochene Passagen (über 20.000 Zeichen) werden von der Überprüfung vollständig ausgenommen, da das Durchsuchen so großer Blöcke spürbare Verzögerungen ohne praktischen Nutzen verursacht.</p>
 </div>
 
 <div class="feature-item">
-<h3>Einträge aus einer Datei importieren</h3>
+<h3>Sicherheitsprüfungen für reguläre Ausdrücke</h3>
 <br>
-<p>Du kannst Einträge mit <b>Aus Datei importieren...</b> in großen Mengen in die aktuell ausgewählte Website laden. Browsers Dictionary liest eine JSON-Datei, die eine „words“-Liste enthält, in der jeder Eintrag eine einfache Zeichenkette (als einfacher Textersatz behandelt) oder ein vollständiges Objekt mit Muster-, Ersatz- und Regex-Einstellungen sein kann. Nach der Bestätigung wird gemeldet, wie viele Einträge hinzugefügt und wie viele übersprungen wurden, beispielsweise weil sie für diese Website bereits existierten.</p>
+<p>Jedes Mal, wenn Sie einen regulären Ausdruck speichern — sei es für einen Worteintrag oder für das URL-Muster einer Webseite — überprüft Browsers Dictionary diesen auf zwei Arten:</p>
+<br>
+<p><b>Schritt 1 — Gültigkeitsprüfung:</b> Das Muster muss tatsächlich als gültiger regulärer Ausdruck kompiliert werden können, andernfalls wird das Speichern mit einer Erklärung verweigert.<br>
+<b>Schritt 2 — Prüfung auf unendliche Schleifen:</b> Das Muster wird mit einer bekannten Struktur verglichen, die häufig dazu führt, dass reguläre Ausdrücke bei bestimmten Texten extrem langsam ausgeführt werden (mehrfach verschachtelte Gruppen wie <code>(x+)+</code>). Wenn es dieser Struktur entspricht, hören Sie eine Warnmeldung — das Muster wird jedoch trotzdem gespeichert, da diese Prüfung nicht garantieren kann, dass ein Muster tatsächlich unsicher ist, sondern nur, dass es unsicheren Mustern ähnelt.</p>
+<br>
+<div class="note">
+Als zusätzliche Schutzmaßnahme beim Surfen teilen sich alle Sprachwörterbuch-Einträge mit regulären Ausdrücken für eine einzelne gesprochene Phrase ein gemeinsames Zeitbudget von 0,1 Sekunden. Wenn dieses Budget aufgebraucht ist, werden alle verbleibenden Einträge mit regulären Ausdrücken für diese Phrase übersprungen, sodass ein einzelnes komplexes Muster Ihre Sprachausgabe nicht spürbar verzögern kann.
+</div>
 </div>
 
 <div class="feature-item">
-<h3>Regex-Sicherheitswarnungen und Zeitbudget</h3>
+<h3>Verwalten von Webseiten und Einträgen</h3>
 <br>
-<p>Um dich vor Mustern zu schützen, die die Sprachausgabe einfrieren oder verlangsamen könnten:</p>
+<p>Der Einstellungsdialog listet alle Ihre konfigurierten Webseiten auf der einen Seite und die Wörterbucheinträge der aktuellen Webseite auf der anderen Seite auf. Von hier aus können Sie:</p>
 <br>
-<p>- Wenn du einen regulären Ausdruck speicherst, der den Anschein erweckt, ein unkontrolliertes „katastrophales Backtracking“ (bestimmte verschachtelte wiederholte Gruppen) verursachen zu können, warnt dich NVDA, dass das Muster langsam laufen könnte, sodass du es vereinfachen kannst. Dies ist ein hilfreicher Hinweis, keine harte Sperre; der Eintrag wird trotzdem gespeichert<br>
-- Während des Sprechens erlaubt Browsers Dictionary nur eine kurze Gesamtverarbeitungszeit für alle regulären Ausdruck-Einträge auf einem einzelnen Sprachstück. Wenn dieses Budget aufgebraucht ist, werden alle verbleibenden Regex-Einträge für dieses Sprachstück übersprungen, damit deine Sprachausgabe nicht aufgehalten wird<br>
-- Extrem lange Textabschnitte werden überhaupt nicht nach Ersetzungen durchsucht, da das Scannen dieser Abschnitte ohne nennenswerten Nutzen Verzögerungen verursachen würde</p>
+<p>- Einen Wörterbucheintrag hinzufügen, bearbeiten oder entfernen (auch erreichbar über die Entf-Taste oder ein Kontextmenü per Rechter Maustaste in der Eintragsliste).<br>
+- Eine gesamte Webseite bearbeiten oder entfernen (auch erreichbar über die Entf-Taste oder ein Kontextmenü per Rechter Maustaste in der Webseitenliste).<br>
+- Eine Liste von Einträgen aus einer JSON-Datei direkt in die aktuell ausgewählte Webseite importieren.</p>
 </div>
 
 <div class="feature-item">
-<h3>Nahtlose Migration von älteren Konfigurationen</h3>
+<h3>Importieren von Einträgen aus einer Datei</h3>
 <br>
-<p>Browsers Dictionary sucht beim ersten Start automatisch nach Konfigurationsdaten, die von früheren Versionen oder dem vorherigen Namen der Erweiterung „Invisible“ hinterlassen wurden, und führt diese in die aktuelle Konfiguration ein. Websites und Einträge aus einem älteren Layout werden kopiert, ohne etwas zu überschreiben, das du bereits eingerichtet hast; falls bereits eine Datei mit demselben Namen existiert, wird die ältere Kopie als Backup aufbewahrt, anstatt verworfen zu werden. Doppelte Websitedateien, die am Ende dieselbe Website repräsentieren, werden automatisch zusammengeführt, wobei doppelte Einträge in einer Liste kombiniert werden.</p>
+<p>Sie können Wörterbucheinträge aus einer JSON-Datei stapelweise in die aktuell ausgewählte Webseite laden. Die Datei benötigt eine "words"-Liste, die entweder einfache Textwerte oder vollständige Einträge mit einem Muster, einem optionalen Regex-Schalter und einer optionalen Ersetzung enthält.</p>
+<br>
+<p>Fehlerhafte Einträge werden übersprungen, anstatt den gesamten Import abzubrechen, und Sie erfahren nach Fertigstellung genau, wie viele Einträge hinzugefügt und wie viele übersprungen wurden. Importierte reguläre Ausdrücke durchlaufen dieselben oben beschriebenen Gültigkeits- und Sicherheitsprüfungen.</p>
+</div>
+
+<div class="feature-item">
+<h3>Automatische Migration der Konfiguration</h3>
+<br>
+<p>Wenn Browsers Dictionary Wörterbücher erkennt, die von einer älteren Version der Erweiterung gespeichert wurden (einschließlich einer Version, die unter dem früheren Namen dieser Erweiterung veröffentlicht wurde), kopiert es diese beim ersten Start automatisch an den aktuellen Konfigurationsort. Es geht nichts verloren, selbst wenn an beiden Orten bereits Einträge vorhanden sind — übereinstimmende Webseiten lassen ihre Wortlisten zusammenführen, anstatt dass eine Kopie die andere überschreibt.</p>
 </div>
 
 </div>
 
 <br><br>
-<h2>Unterstütze mich</h2>
-    <p>Wenn dir dieses Tool das Leben erleichtert hat, erwäge doch, das nächste Update mit einer kleinen Spende zu unterstützen.</p>
+<h2>Unterstützen Sie mich</h2>
+    <p>Wenn dieses Werkzeug Ihr Leben erleichtert hat, ziehen Sie bitte in Erwägung, das nächste Update mit einer kleinen Spende zu unterstützen.</p>
 <br>
 <p>
   <a href="https://buy.stripe.com/dRm9AU1xQ3Ds22N6VK1VK01">
-    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Unterstütze mich">
+    <img src="https://img.shields.io/badge/Donate-Support%20Me-blue?style=for-the-badge&logo=stripe" alt="Unterstützen Sie mich">
   </a>
 </p>
 <br>
-<p>Deine Unterstützung bedeutet mir die Welt. Lass uns gemeinsam etwas Großartiges erschaffen</p>
+<p>Ihre Unterstützung bedeutet mir sehr viel. Lassen Sie uns gemeinsam etwas Großartiges schaffen</p>
 <br>
   <div class="footer-note">
-<p>&copy; 2026 Chai Chaimee NVDA Add-on Veröffentlicht unter GNU GPL</p>
+<p>&copy; 2026 Chai Chaimee NVDA-Erweiterung Veröffentlicht unter der GNU GPL</p>
 </div>
 
 </div> <!-- End container -->

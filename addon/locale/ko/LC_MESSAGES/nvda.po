@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-15 10:14+0700\n"
-"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Korean\n"
 "Language: ko\n"
@@ -12,155 +12,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:90
-#: gui.py:208
-msgid "&Add"
-msgstr "추가(&A)"
+#: gui.py:83
+msgid "&Add..."
+msgstr "추가(&A)..."
 
-#: gui.py:93
-#: gui.py:613
+#: gui.py:554
+#: gui.py:671
 msgid "&Cancel"
 msgstr "취소(&C)"
 
-#: gui.py:108
+#: gui.py:98
 msgid "&Close"
 msgstr "닫기(&C)"
 
-#: gui.py:91
-msgid "&Edit"
-msgstr "편집(&E)"
-
-#: gui.py:250
+#: gui.py:224
 msgid "&Edit Site"
 msgstr "사이트 편집(&E)"
 
-#: gui.py:431
+#: gui.py:405
 msgid "&Edit Word"
 msgstr "단어 편집(&E)"
 
-#: gui.py:106
+#: gui.py:84
+msgid "&Edit..."
+msgstr "편집(&E)..."
+
+#: gui.py:96
 msgid "&Import from file..."
 msgstr "파일에서 가져오기(&I)..."
 
-#: gui.py:107
+#: gui.py:97
+#: gui.py:553
 msgid "&OK"
 msgstr "확인(&O)"
 
-#: gui.py:92
+#: gui.py:85
 msgid "&Remove"
 msgstr "제거(&R)"
 
-#: gui.py:251
+#: gui.py:225
 msgid "&Remove Site"
 msgstr "사이트 제거(&R)"
 
-#: gui.py:432
+#: gui.py:406
 msgid "&Remove Word"
 msgstr "단어 제거(&R)"
 
-#: gui.py:612
+#: gui.py:670
 msgid "&Save"
 msgstr "저장(&S)"
 
-#: gui.py:202
-msgid "&Update"
-msgstr "업데이트(&U)"
+#: gui.py:519
+msgid "Add Dictionary Entry"
+msgstr "사전 항목 추가"
 
-#: gui.py:562
+#: gui.py:620
 msgid "Add New Site"
 msgstr "새 사이트 추가"
 
-#: gui.py:598
+#: gui.py:656
 msgid "Apply to:"
 msgstr "적용 대상:"
 
-#: gui.py:296
-#: gui.py:529
+#: gui.py:270
+#: gui.py:474
 msgid "Are you sure you want to remove '{}'?"
 msgstr "정말로 '{}'을(를) 제거하시겠습니까?"
 
-#: addonCore.py:45
-#: addonCore.py:270
+#: addonCore.py:46
+#: addonCore.py:311
 msgid "Browsers Dictionary"
 msgstr "Browsers Dictionary"
 
-#: gui.py:19
+#: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary 설정"
 
-#: addonCore.py:294
+#: addonCore.py:335
+#: addonCore.py:341
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "URL을 캡처할 수 없습니다. 브라우저에 있는지 확인하세요."
 
-#: gui.py:385
+#: gui.py:359
 msgid "Confirm Import"
 msgstr "가져오기 확인"
 
-#: gui.py:297
-#: gui.py:530
+#: gui.py:271
+#: gui.py:475
 msgid "Confirm Removal"
 msgstr "제거 확인"
 
-#: gui.py:351
+#: gui.py:325
 msgid "Could not read file: {}"
 msgstr "파일을 읽을 수 없습니다: {}"
 
-#: gui.py:673
+#: gui.py:741
 msgid "Display name cannot be empty."
 msgstr "표시 이름은 비워 둘 수 없습니다."
 
-#: gui.py:586
+#: gui.py:644
 msgid "Display name:"
 msgstr "표시 이름:"
 
-#: gui.py:562
+#: gui.py:519
+msgid "Edit Dictionary Entry"
+msgstr "사전 항목 편집"
+
+#: gui.py:620
 msgid "Edit Site"
 msgstr "사이트 편집"
 
-#: gui.py:517
-msgid "Edit cancelled"
-msgstr "편집 취소됨"
-
-#: gui.py:513
-msgid "Editing entry: {}"
-msgstr "항목 편집 중: {}"
-
-#: gui.py:70
+#: gui.py:71
 msgid "Entries"
 msgstr "항목 목록"
 
-#: gui.py:491
+#: gui.py:434
 msgid "Entry added successfully"
 msgstr "항목이 성공적으로 추가되었습니다"
 
-#: gui.py:545
+#: gui.py:490
 msgid "Entry removed: {}"
 msgstr "항목이 제거됨: {}"
 
-#: gui.py:481
+#: gui.py:459
 msgid "Entry updated successfully"
 msgstr "항목이 성공적으로 업데이트되었습니다"
 
-#: gui.py:281
-#: gui.py:351
-#: gui.py:355
-#: gui.py:673
-#: gui.py:676
-#: gui.py:690
-#: gui.py:700
-#: gui.py:709
+#: gui.py:255
+#: gui.py:325
+#: gui.py:329
+#: gui.py:741
+#: gui.py:744
+#: gui.py:758
+#: gui.py:768
+#: gui.py:777
 msgid "Error"
 msgstr "오류"
 
-#: gui.py:709
+#: gui.py:777
 msgid "Failed to add site. It may already exist."
 msgstr "사이트를 추가하지 못했습니다. 이미 존재할 수 있습니다."
 
-#: gui.py:548
+#: gui.py:493
 msgid "Failed to remove entry"
 msgstr "항목을 제거하지 못했습니다"
 
-#: gui.py:329
+#: gui.py:303
 msgid "Failed to remove site"
 msgstr "사이트를 제거하지 못했습니다"
 
@@ -169,52 +166,56 @@ msgstr "사이트를 제거하지 못했습니다"
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "설정을 저장하지 못했습니다(권한 또는 디스크 오류)"
 
-#: gui.py:700
+#: gui.py:768
 msgid "Failed to update site. The display name might already exist."
 msgstr "사이트를 업데이트하지 못했습니다. 표시 이름이 이미 존재할 수 있습니다."
 
-#: gui.py:423
+#: gui.py:397
 msgid "Import completed: {} added, {} skipped."
 msgstr "가져오기 완료: {}개 추가됨, {}개 건너뜀."
 
-#: gui.py:382
+#: gui.py:356
 msgid "Import {} word(s) into the current site '{}'?"
 msgstr "현재 사이트 '{}'에 {}개 단어를 가져오시겠습니까?"
 
-#: gui.py:379
+#: gui.py:353
 msgid "Information"
 msgstr "정보"
 
-#: gui.py:466
-#: gui.py:690
+#: gui.py:586
+#: gui.py:758
 msgid "Invalid Regular Expression: {}"
 msgstr "잘못된 정규 표현식: {}"
 
-#: gui.py:460
+#: addonCore.py:345
+msgid "No site configured for the current page yet. Double-tap to add one first."
+msgstr "현재 페이지에 설정된 사이트가 없습니다. 먼저 추가하려면 두 번 탭하세요."
+
+#: gui.py:418
 msgid "No site selected"
 msgstr "선택된 사이트 없음"
 
-#: gui.py:379
+#: gui.py:353
 msgid "No valid word entries found in the file."
 msgstr "파일에서 유효한 단어 항목을 찾을 수 없습니다."
 
-#: addonCore.py:268
-msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
-msgstr "Browsers Dictionary 설정 열기 (한 번 탭) 또는 새 사이트 추가 (두 번 탭)"
+#: addonCore.py:309
+msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
+msgstr "브라우저 사전 설정 열기(한 번 탭), 새 사이트 추가(두 번 탭) 또는 현재 사이트 편집(세 번 탭)"
 
 #: manager.py:436
 msgid "Original entry not found"
 msgstr "원래 항목을 찾을 수 없음"
 
-#: gui.py:76
+#: gui.py:539
 msgid "Pattern:"
 msgstr "패턴:"
 
-#: gui.py:457
+#: gui.py:579
 msgid "Please enter a pattern"
 msgstr "패턴을 입력하세요"
 
-#: gui.py:334
+#: gui.py:308
 msgid "Please select a site first."
 msgstr "먼저 사이트를 선택하세요."
 
@@ -223,23 +224,23 @@ msgstr "먼저 사이트를 선택하세요."
 msgid "Regex"
 msgstr "정규 표현식"
 
-#: gui.py:604
+#: gui.py:662
 msgid "Regular expression (match URL from start)"
 msgstr "정규 표현식 (시작 지점부터 URL 일치)"
 
-#: gui.py:81
+#: gui.py:544
 msgid "Replacement:"
 msgstr "바꿀 문자열:"
 
-#: gui.py:339
+#: gui.py:313
 msgid "Select a JSON file to import"
 msgstr "가져올 JSON 파일 선택"
 
-#: gui.py:602
+#: gui.py:660
 msgid "Single page only"
 msgstr "단일 페이지 전용"
 
-#: gui.py:64
+#: gui.py:65
 msgid "Site List"
 msgstr "사이트 목록"
 
@@ -248,11 +249,11 @@ msgstr "사이트 목록"
 msgid "Site not found"
 msgstr "사이트를 찾을 수 없음"
 
-#: gui.py:327
+#: gui.py:301
 msgid "Site removed: {}"
 msgstr "사이트가 제거됨: {}"
 
-#: gui.py:355
+#: gui.py:329
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "선택한 파일이 유효한 Browsers Dictionary 사이트 설정 파일이 아닌 것 같습니다."
 
@@ -261,31 +262,31 @@ msgstr "선택한 파일이 유효한 Browsers Dictionary 사이트 설정 파�
 msgid "This pattern/regex combination already exists"
 msgstr "이 패턴/정규 표현식 조합이 이미 존재합니다"
 
-#: gui.py:676
+#: gui.py:744
 msgid "URL cannot be empty."
 msgstr "URL은 비워 둘 수 없습니다."
 
-#: gui.py:592
+#: gui.py:650
 msgid "URL:"
 msgstr "URL:"
 
-#: gui.py:86
+#: gui.py:549
 msgid "Use as regular expression"
 msgstr "정규 표현식으로 사용"
 
-#: gui.py:425
+#: gui.py:399
 msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
 msgstr "경고: 가져온 패턴 중 하나 이상이 긴 텍스트에서 느리게 실행되거나 음성 출력을 멈추게 할 수 있습니다. 항목 목록에서 확인하세요."
 
-#: gui.py:496
+#: gui.py:611
 msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
 msgstr "경고: 이 패턴은 긴 텍스트에서 느리게 실행되거나 음성 출력을 멈추게 할 수 있습니다. 간단하게 수정하는 것을 고려해 보세요."
 
-#: gui.py:697
-#: gui.py:705
+#: gui.py:765
+#: gui.py:773
 msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
 msgstr "경고: 이 패턴은 URL을 일치시킬 때 느리게 실행되거나 음성 출력을 멈추게 할 수 있습니다. 간단하게 수정하는 것을 고려해 보세요."
 
-#: gui.py:603
+#: gui.py:661
 msgid "Whole website (domain)"
 msgstr "전체 웹사이트 (도메인)"

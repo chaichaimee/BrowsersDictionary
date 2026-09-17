@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.0\n"
+"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-15 10:14+0700\n"
-"PO-Revision-Date: 2026-09-15 10:14+0700\n"
+"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Indonesian\n"
 "Language: id\n"
@@ -12,155 +12,152 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: DevOn Addon\n"
 
-#: gui.py:90
-#: gui.py:208
-msgid "&Add"
-msgstr "&Tambah"
+#: gui.py:83
+msgid "&Add..."
+msgstr "&Tambah..."
 
-#: gui.py:93
-#: gui.py:613
+#: gui.py:554
+#: gui.py:671
 msgid "&Cancel"
 msgstr "&Batal"
 
-#: gui.py:108
+#: gui.py:98
 msgid "&Close"
 msgstr "&Tutup"
 
-#: gui.py:91
-msgid "&Edit"
-msgstr "&Edit"
-
-#: gui.py:250
+#: gui.py:224
 msgid "&Edit Site"
 msgstr "&Edit Situs"
 
-#: gui.py:431
+#: gui.py:405
 msgid "&Edit Word"
 msgstr "Edit &Kata"
 
-#: gui.py:106
+#: gui.py:84
+msgid "&Edit..."
+msgstr "&Sunting..."
+
+#: gui.py:96
 msgid "&Import from file..."
 msgstr "&Impor dari berkas..."
 
-#: gui.py:107
+#: gui.py:97
+#: gui.py:553
 msgid "&OK"
 msgstr "&OK"
 
-#: gui.py:92
+#: gui.py:85
 msgid "&Remove"
 msgstr "&Hapus"
 
-#: gui.py:251
+#: gui.py:225
 msgid "&Remove Site"
 msgstr "Hapus Si&tus"
 
-#: gui.py:432
+#: gui.py:406
 msgid "&Remove Word"
 msgstr "Hapus Kat&a"
 
-#: gui.py:612
+#: gui.py:670
 msgid "&Save"
 msgstr "&Simpan"
 
-#: gui.py:202
-msgid "&Update"
-msgstr "&Perbarui"
+#: gui.py:519
+msgid "Add Dictionary Entry"
+msgstr "Tambah Entri Kamus"
 
-#: gui.py:562
+#: gui.py:620
 msgid "Add New Site"
 msgstr "Tambah Situs Baru"
 
-#: gui.py:598
+#: gui.py:656
 msgid "Apply to:"
 msgstr "Terapkan ke:"
 
-#: gui.py:296
-#: gui.py:529
+#: gui.py:270
+#: gui.py:474
 msgid "Are you sure you want to remove '{}'?"
 msgstr "Apakah Anda yakin ingin menghapus '{}'?"
 
-#: addonCore.py:45
-#: addonCore.py:270
+#: addonCore.py:46
+#: addonCore.py:311
 msgid "Browsers Dictionary"
 msgstr "Browsers Dictionary"
 
-#: gui.py:19
+#: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Pengaturan Browsers Dictionary"
 
-#: addonCore.py:294
+#: addonCore.py:335
+#: addonCore.py:341
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "Tidak dapat menangkap URL. Pastikan Anda berada di peramban."
 
-#: gui.py:385
+#: gui.py:359
 msgid "Confirm Import"
 msgstr "Konfirmasi Impor"
 
-#: gui.py:297
-#: gui.py:530
+#: gui.py:271
+#: gui.py:475
 msgid "Confirm Removal"
 msgstr "Konfirmasi Penghapusan"
 
-#: gui.py:351
+#: gui.py:325
 msgid "Could not read file: {}"
 msgstr "Tidak dapat membaca berkas: {}"
 
-#: gui.py:673
+#: gui.py:741
 msgid "Display name cannot be empty."
 msgstr "Nama tampilan tidak boleh kosong."
 
-#: gui.py:586
+#: gui.py:644
 msgid "Display name:"
 msgstr "Nama tampilan:"
 
-#: gui.py:562
+#: gui.py:519
+msgid "Edit Dictionary Entry"
+msgstr "Sunting Entri Kamus"
+
+#: gui.py:620
 msgid "Edit Site"
 msgstr "Edit Situs"
 
-#: gui.py:517
-msgid "Edit cancelled"
-msgstr "Editan dibatalkan"
-
-#: gui.py:513
-msgid "Editing entry: {}"
-msgstr "Mengedit entri: {}"
-
-#: gui.py:70
+#: gui.py:71
 msgid "Entries"
 msgstr "Entri"
 
-#: gui.py:491
+#: gui.py:434
 msgid "Entry added successfully"
 msgstr "Entri berhasil ditambahkan"
 
-#: gui.py:545
+#: gui.py:490
 msgid "Entry removed: {}"
 msgstr "Entri dihapus: {}"
 
-#: gui.py:481
+#: gui.py:459
 msgid "Entry updated successfully"
 msgstr "Entri berhasil diperbarui"
 
-#: gui.py:281
-#: gui.py:351
-#: gui.py:355
-#: gui.py:673
-#: gui.py:676
-#: gui.py:690
-#: gui.py:700
-#: gui.py:709
+#: gui.py:255
+#: gui.py:325
+#: gui.py:329
+#: gui.py:741
+#: gui.py:744
+#: gui.py:758
+#: gui.py:768
+#: gui.py:777
 msgid "Error"
 msgstr "Kesalahan"
 
-#: gui.py:709
+#: gui.py:777
 msgid "Failed to add site. It may already exist."
 msgstr "Gagal menambahkan situs. Situs mungkin sudah ada."
 
-#: gui.py:548
+#: gui.py:493
 msgid "Failed to remove entry"
 msgstr "Gagal menghapus entri"
 
-#: gui.py:329
+#: gui.py:303
 msgid "Failed to remove site"
 msgstr "Gagal menghapus situs"
 
@@ -169,52 +166,56 @@ msgstr "Gagal menghapus situs"
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "Gagal menyimpan konfigurasi (kesalahan izin atau disk)"
 
-#: gui.py:700
+#: gui.py:768
 msgid "Failed to update site. The display name might already exist."
 msgstr "Gagal memperbarui situs. Nama tampilan mungkin sudah ada."
 
-#: gui.py:423
+#: gui.py:397
 msgid "Import completed: {} added, {} skipped."
 msgstr "Impor selesai: {} ditambahkan, {} dilewati."
 
-#: gui.py:382
+#: gui.py:356
 msgid "Import {} word(s) into the current site '{}'?"
 msgstr "Impor {} kata ke situs saat ini '{}'?"
 
-#: gui.py:379
+#: gui.py:353
 msgid "Information"
 msgstr "Informasi"
 
-#: gui.py:466
-#: gui.py:690
+#: gui.py:586
+#: gui.py:758
 msgid "Invalid Regular Expression: {}"
 msgstr "Ekspresi Reguler tidak valid: {}"
 
-#: gui.py:460
+#: addonCore.py:345
+msgid "No site configured for the current page yet. Double-tap to add one first."
+msgstr "Belum ada situs yang dikonfigurasi untuk halaman saat ini. Ketuk dua kali untuk menambahkannya terlebih dahulu."
+
+#: gui.py:418
 msgid "No site selected"
 msgstr "Tidak ada situs yang dipilih"
 
-#: gui.py:379
+#: gui.py:353
 msgid "No valid word entries found in the file."
 msgstr "Tidak ada entri kata yang valid ditemukan dalam berkas."
 
-#: addonCore.py:268
-msgid "Open Browsers Dictionary settings (single tap) or Add new site (double tap)"
-msgstr "Buka pengaturan Browsers Dictionary (ketuk sekali) atau Tambah situs baru (ketuk dua kali)"
+#: addonCore.py:309
+msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
+msgstr "Buka pengaturan Kamus Peramban (ketuk sekali), tambah situs baru (ketuk dua kali), atau sunting situs saat ini (ketuk tiga kali)"
 
 #: manager.py:436
 msgid "Original entry not found"
 msgstr "Entri asli tidak ditemukan"
 
-#: gui.py:76
+#: gui.py:539
 msgid "Pattern:"
 msgstr "Pola:"
 
-#: gui.py:457
+#: gui.py:579
 msgid "Please enter a pattern"
 msgstr "Silakan masukkan pola"
 
-#: gui.py:334
+#: gui.py:308
 msgid "Please select a site first."
 msgstr "Silakan pilih situs terlebih dahulu."
 
@@ -223,23 +224,23 @@ msgstr "Silakan pilih situs terlebih dahulu."
 msgid "Regex"
 msgstr "Ekspresi Reguler"
 
-#: gui.py:604
+#: gui.py:662
 msgid "Regular expression (match URL from start)"
 msgstr "Ekspresi reguler (cocokkan URL dari awal)"
 
-#: gui.py:81
+#: gui.py:544
 msgid "Replacement:"
 msgstr "Pengganti:"
 
-#: gui.py:339
+#: gui.py:313
 msgid "Select a JSON file to import"
 msgstr "Pilih berkas JSON untuk diimpor"
 
-#: gui.py:602
+#: gui.py:660
 msgid "Single page only"
 msgstr "Hanya satu halaman"
 
-#: gui.py:64
+#: gui.py:65
 msgid "Site List"
 msgstr "Daftar Situs"
 
@@ -248,11 +249,11 @@ msgstr "Daftar Situs"
 msgid "Site not found"
 msgstr "Situs tidak ditemukan"
 
-#: gui.py:327
+#: gui.py:301
 msgid "Site removed: {}"
 msgstr "Situs dihapus: {}"
 
-#: gui.py:355
+#: gui.py:329
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "Berkas yang dipilih tampaknya bukan konfigurasi situs Browsers Dictionary yang valid."
 
@@ -261,31 +262,31 @@ msgstr "Berkas yang dipilih tampaknya bukan konfigurasi situs Browsers Dictionar
 msgid "This pattern/regex combination already exists"
 msgstr "Kombinasi pola/ekspresi reguler ini sudah ada"
 
-#: gui.py:676
+#: gui.py:744
 msgid "URL cannot be empty."
 msgstr "URL tidak boleh kosong."
 
-#: gui.py:592
+#: gui.py:650
 msgid "URL:"
 msgstr "URL:"
 
-#: gui.py:86
+#: gui.py:549
 msgid "Use as regular expression"
 msgstr "Gunakan sebagai ekspresi reguler"
 
-#: gui.py:425
+#: gui.py:399
 msgid "Warning: one or more imported patterns may run slowly or freeze speech on long text. Review them in the Entries list."
 msgstr "Peringatan: satu atau lebih pola yang diimpor mungkin berjalan lambat atau membekukan ucapan pada teks yang panjang. Tinjau kembali di daftar Entri."
 
-#: gui.py:496
+#: gui.py:611
 msgid "Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."
 msgstr "Peringatan: pola ini mungkin berjalan lambat atau membekukan ucapan pada teks yang panjang. Pertimbangkan untuk menyederhanakannya."
 
-#: gui.py:697
-#: gui.py:705
+#: gui.py:765
+#: gui.py:773
 msgid "Warning: this pattern may run slowly or freeze speech when matching URLs. Consider simplifying it."
 msgstr "Peringatan: pola ini mungkin berjalan lambat atau membekukan ucapan saat mencocokkan URL. Pertimbangkan untuk menyederhanakannya."
 
-#: gui.py:603
+#: gui.py:661
 msgid "Whole website (domain)"
 msgstr "Seluruh situs web (domain)"

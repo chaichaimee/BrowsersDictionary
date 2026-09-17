@@ -1,5 +1,6 @@
 # addonCore.py
 
+import logging
 import re
 import time
 import threading
@@ -79,21 +80,61 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		siteData = self.config.get_site_by_url(currentUrl)
 		if not siteData:
+			# Temporary diagnostic (Section 20): confirms whether the cached
+			# URL is even reaching a configured site at all. Remove once the
+			# "messages until" root cause is confirmed and closed.
+			if log.isEnabledFor(logging.DEBUG):
+				log.debug(f"BrowsersDictionary: no site configured for current URL ({currentUrl[:80]!r})")
 			return speechSequence
 
 		wordsData = siteData.get("words", [])
 		if not wordsData:
 			return speechSequence
 
+		if log.isEnabledFor(logging.DEBUG):
+			log.debug(
+				f"BrowsersDictionary: matched site '{siteData.get('display_name', '?')}' "
+				f"with {len(wordsData)} entrie(s) for URL ({currentUrl[:80]!r})"
+			)
+
+		# A dictionary pattern is matched against a run of adjacent string
+		# items joined together, not against each item in isolation. NVDA
+		# frequently splits a single spoken utterance into several plain
+		# string items with no separating command between them - e.g. a
+		# link's role name, the link's own text, and any trailing text
+		# after it arrive as three consecutive strings. A pattern spanning
+		# exactly that kind of boundary (e.g. "messages until", where
+		# "messages" is a link's text and " until ..." is the text that
+		# follows the link) could never match when each item was scanned
+		# on its own, which was the confirmed cause of such patterns
+		# silently never firing. Non-string items (LangChangeCommand,
+		# PitchCommand, etc.) still act as hard boundaries and are never
+		# merged across.
 		filteredSequence = []
+		textRun = []
 		for item in speechSequence:
 			if isinstance(item, str):
-				filteredSequence.append(self._apply_word_replacements(item, wordsData))
-			else:
-				# Non-text items (LangChangeCommand, PitchCommand, etc.) must
-				# pass through untouched; only plain text is ever substituted.
-				filteredSequence.append(item)
+				textRun.append(item)
+				continue
+			filteredSequence.extend(self._flush_text_run(textRun, wordsData))
+			textRun = []
+			filteredSequence.append(item)
+		filteredSequence.extend(self._flush_text_run(textRun, wordsData))
 		return filteredSequence
+
+	def _flush_text_run(self, text_run, words_data):
+		if not text_run:
+			return []
+		joinedText = "".join(text_run)
+		replacedText = self._apply_word_replacements(joinedText, words_data)
+		if replacedText == joinedText:
+			# Nothing matched - hand the original items back unmodified so a
+			# run with no applicable pattern keeps its exact prior shape
+			# instead of being needlessly collapsed into one string.
+			return list(text_run)
+		if log.isEnabledFor(logging.DEBUG):
+			log.debug(f"BrowsersDictionary: applied dictionary, {joinedText[:80]!r} -> {replacedText[:80]!r}")
+		return [replacedText]
 
 	def _apply_word_replacements(self, text, words_data):
 		if not text or len(text) > MAX_SCANNED_TEXT_LENGTH:
@@ -265,8 +306,8 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			return self._cached_url
 
 	@script(
-		description=_("Open Browsers Dictionary settings (single tap) or Add new site (double tap)"),
-		gesture="kb:NVDA+shift+W",
+		description=_("Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"),
+		gesture="kb:alt+windows+B",
 		category=_("Browsers Dictionary")
 	)
 	def script_openSettings(self, gesture):
@@ -289,11 +330,26 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				if self._tap_count == 1:
 					nvdaGui.mainFrame.popupSettingsDialog(MainDialog, currentUrl, self.config)
 					return
-				if self._tap_count >= 2:
+				if self._tap_count == 2:
 					if not currentUrl:
 						ui.message(_("Cannot capture URL. Make sure you are in a browser."))
 						return
 					nvdaGui.mainFrame.popupSettingsDialog(AddSiteDialog, self.config, currentUrl)
+					return
+				if self._tap_count >= 3:
+					if not currentUrl:
+						ui.message(_("Cannot capture URL. Make sure you are in a browser."))
+						return
+					existingSite = self.config.get_site_by_url(currentUrl)
+					if not existingSite:
+						ui.message(_("No site configured for the current page yet. Double-tap to add one first."))
+						return
+					nvdaGui.mainFrame.popupSettingsDialog(
+						AddSiteDialog,
+						self.config,
+						edit_mode=True,
+						site_id=existingSite["display_name"]
+					)
 			except (RuntimeError, ValueError) as err:
 				log.error(f"BrowsersDictionary: Dialog error: {err}")
 			finally:
@@ -301,5 +357,3 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				self._pending_action = None
 
 		self._pending_action = wx.CallLater(int(DOUBLE_TAP_THRESHOLD * 1000), execute_action)
-
-

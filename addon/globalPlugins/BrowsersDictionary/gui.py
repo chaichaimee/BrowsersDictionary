@@ -1,3 +1,5 @@
+# gui.py
+
 import wx
 import addonHandler
 import ui
@@ -22,7 +24,6 @@ class MainDialog(wx.Dialog):
 		self.current_url = current_url
 		self.config = config
 		self.current_site_id = None
-		self.editing_word_data = None
 
 		existing_site = self.config.get_site_by_url(current_url)
 		if existing_site:
@@ -69,34 +70,23 @@ class MainDialog(wx.Dialog):
 
 		entriesBox = wx.StaticBoxSizer(wx.VERTICAL, self, label=_("Entries"))
 
-		self.wordsList = wx.ListBox(self, style=wx.LB_SINGLE, size=(-1, 150))
+		self.wordsList = wx.ListBox(self, style=wx.LB_SINGLE, size=(-1, 200))
 		self._update_words_list()
 		entriesBox.Add(self.wordsList, 1, wx.EXPAND | wx.ALL, 5)
 
-		entriesBox.Add(wx.StaticText(self, label=_("Pattern:")), 0, wx.ALL, 5)
-		self.wordCtrl = wx.TextCtrl(self)
-		entriesBox.Add(self.wordCtrl, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.TOP, 5)
-
-		replacementSizer = wx.BoxSizer(wx.HORIZONTAL)
-		replacementSizer.Add(wx.StaticText(self, label=_("Replacement:")), 0, wx.RIGHT | wx.ALIGN_CENTER_VERTICAL, 5)
-		self.replacementCtrl = wx.TextCtrl(self)
-		replacementSizer.Add(self.replacementCtrl, 1, wx.EXPAND)
-		entriesBox.Add(replacementSizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.TOP, 5)
-
-		self.regexCheck = wx.CheckBox(self, label=_("Use as regular expression"))
-		entriesBox.Add(self.regexCheck, 0, wx.LEFT | wx.RIGHT | wx.TOP, 5)
-
-		wordBtnSizer = wx.BoxSizer(wx.VERTICAL)
-		self.addUpdateWordBtn = wx.Button(self, label=_("&Add"))
-		self.editWordBtn = wx.Button(self, label=_("&Edit"))
+		# Pattern/Replacement/regex entry is no longer edited inline here -
+		# it lives in its own WordEntryDialog (Section 22), the same split
+		# NVDA's own built-in speech dictionary uses between its list dialog
+		# and its Add/Edit dialog, so this dialog only ever owns search,
+		# listing, and selection.
+		wordBtnSizer = wx.BoxSizer(wx.HORIZONTAL)
+		self.addWordBtn = wx.Button(self, label=_("&Add..."))
+		self.editWordBtn = wx.Button(self, label=_("&Edit..."))
 		self.removeWordBtn = wx.Button(self, label=_("&Remove"))
-		self.cancelEditBtn = wx.Button(self, label=_("&Cancel"))
-		self.cancelEditBtn.Hide()
 
-		wordBtnSizer.Add(self.addUpdateWordBtn, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 5)
-		wordBtnSizer.Add(self.editWordBtn, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 5)
-		wordBtnSizer.Add(self.removeWordBtn, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.BOTTOM, 5)
-		wordBtnSizer.Add(self.cancelEditBtn, 0, wx.EXPAND | wx.LEFT | wx.RIGHT, 5)
+		wordBtnSizer.Add(self.addWordBtn, 0, wx.RIGHT, 5)
+		wordBtnSizer.Add(self.editWordBtn, 0, wx.RIGHT, 5)
+		wordBtnSizer.Add(self.removeWordBtn, 0)
 
 		entriesBox.Add(wordBtnSizer, 0, wx.ALIGN_CENTER_HORIZONTAL | wx.TOP | wx.BOTTOM, 5)
 
@@ -113,23 +103,21 @@ class MainDialog(wx.Dialog):
 		mainSizer.Add(btnSizer, 0, wx.EXPAND | wx.ALL, 10)
 
 		self.SetSizer(mainSizer)
-		self.SetSize(600, 650)
+		self.SetSize(600, 600)
 		self._select_current_site()
 		self._update_button_states()
 
 	def _bindEvents(self):
 		self.Bind(wx.EVT_LISTBOX, self._onSiteSelect, self.siteList)
-		self.Bind(wx.EVT_BUTTON, self._onAddUpdateWord, self.addUpdateWordBtn)
+		self.Bind(wx.EVT_BUTTON, self._onAddWord, self.addWordBtn)
 		self.Bind(wx.EVT_BUTTON, self._onEditWord, self.editWordBtn)
 		self.Bind(wx.EVT_BUTTON, self._onRemoveWord, self.removeWordBtn)
-		self.Bind(wx.EVT_BUTTON, self._onCancelEdit, self.cancelEditBtn)
 		self.Bind(wx.EVT_BUTTON, self._onImport, self.importBtn)
 		self.Bind(wx.EVT_BUTTON, self._onOk, self.okBtn)
 		self.Bind(wx.EVT_BUTTON, self._onClose, self.closeBtn)
 		self.Bind(wx.EVT_CLOSE, self._onClose)
-		self.Bind(wx.EVT_TEXT, self._onWordTextChange, self.wordCtrl)
-		self.Bind(wx.EVT_CHECKBOX, self._onRegexCheck, self.regexCheck)
 		self.Bind(wx.EVT_LISTBOX, self._onWordListSelect, self.wordsList)
+		self.Bind(wx.EVT_LISTBOX_DCLICK, self._onEditWord, self.wordsList)
 
 		self.siteList.Bind(wx.EVT_CONTEXT_MENU, self._onSiteListContextMenu)
 		self.wordsList.Bind(wx.EVT_CONTEXT_MENU, self._onWordsListContextMenu)
@@ -197,31 +185,10 @@ class MainDialog(wx.Dialog):
 
 	def _update_button_states(self):
 		has_word_sel = self.wordsList.GetSelection() != wx.NOT_FOUND
-		has_word_text = bool(self.wordCtrl.GetValue().strip())
-		if self.editing_word_data:
-			self.addUpdateWordBtn.SetLabel(_("&Update"))
-			self.addUpdateWordBtn.Enable(has_word_text)
-			self.editWordBtn.Enable(False)
-			self.removeWordBtn.Enable(False)
-			self.cancelEditBtn.Show()
-		else:
-			self.addUpdateWordBtn.SetLabel(_("&Add"))
-			self.addUpdateWordBtn.Enable(has_word_text)
-			self.editWordBtn.Enable(has_word_sel)
-			self.removeWordBtn.Enable(has_word_sel)
-			self.cancelEditBtn.Hide()
-		self.Layout()
-
-	def _cancel_edit_mode(self):
-		self.editing_word_data = None
-		self.wordCtrl.Clear()
-		self.regexCheck.SetValue(False)
-		self.replacementCtrl.Clear()
-		self._update_button_states()
+		self.editWordBtn.Enable(has_word_sel)
+		self.removeWordBtn.Enable(has_word_sel)
 
 	def _onSiteSelect(self, evt):
-		if self.editing_word_data:
-			self._cancel_edit_mode()
 		index = self.siteList.GetSelection()
 		if index == wx.NOT_FOUND:
 			return
@@ -233,7 +200,6 @@ class MainDialog(wx.Dialog):
 				self.site_data = site_data
 				self.words_data = self.config.get_words_for_site(self.current_site_id)
 				self._update_words_list()
-				self._cancel_edit_mode()
 				self._update_button_states()
 
 	def _onSiteListContextMenu(self, evt):
@@ -245,12 +211,20 @@ class MainDialog(wx.Dialog):
 			return
 		site_id = sites[index][0]
 		menu = wx.Menu()
-		edit_id = wx.ID_ANY
-		remove_id = wx.ID_ANY
-		edit_item = menu.Append(edit_id, _("&Edit Site"))
-		remove_item = menu.Append(remove_id, _("&Remove Site"))
-		self.Bind(wx.EVT_MENU, lambda evt, sid=site_id: self._onEditSite(evt, sid), id=edit_id)
-		self.Bind(wx.EVT_MENU, lambda evt, sid=site_id: self._onRemoveSite(evt, sid), id=remove_id)
+		# menu.Append(wx.ID_ANY, ...) assigns each item its own real,
+		# auto-generated ID - it does not retroactively give that ID back
+		# to the wx.ID_ANY (-1) placeholder variable passed in. Binding
+		# EVT_MENU with id=wx.ID_ANY instead of the item's actual .GetId()
+		# means every right-click on this list adds another wildcard
+		# binding on the dialog, and those wildcard bindings can shadow
+		# each other - the confirmed symptom was "Edit Site" silently
+		# never opening while "Remove Site" happened to still fire.
+		# Binding to each item's real GetId() scopes the handler to that
+		# specific menu item instead.
+		edit_item = menu.Append(wx.ID_ANY, _("&Edit Site"))
+		remove_item = menu.Append(wx.ID_ANY, _("&Remove Site"))
+		self.Bind(wx.EVT_MENU, lambda evt, sid=site_id: self._onEditSite(evt, sid), id=edit_item.GetId())
+		self.Bind(wx.EVT_MENU, lambda evt, sid=site_id: self._onRemoveSite(evt, sid), id=remove_item.GetId())
 		self.PopupMenu(menu)
 		menu.Destroy()
 
@@ -435,67 +409,33 @@ class MainDialog(wx.Dialog):
 		self.PopupMenu(menu)
 		menu.Destroy()
 
-	def _onWordTextChange(self, evt):
-		self._update_button_states()
-		evt.Skip()
-
-	def _onRegexCheck(self, evt):
-		self._update_button_states()
-		evt.Skip()
-
 	def _onWordListSelect(self, evt):
-		if self.editing_word_data:
-			self._cancel_edit_mode()
 		self._update_button_states()
 		evt.Skip()
 
-	def _onAddUpdateWord(self, evt):
-		word = self.wordCtrl.GetValue().strip()
-		is_regex = self.regexCheck.GetValue()
-		replacement = self.replacementCtrl.GetValue().strip()
-		if not word:
-			ui.message(_("Please enter a pattern"))
-			return
+	def _onAddWord(self, evt):
 		if not self.current_site_id:
 			ui.message(_("No site selected"))
 			return
-		if is_regex:
-			try:
-				re.compile(word)
-			except re.error as e:
-				ui.message(_("Invalid Regular Expression: {}").format(str(e)))
-				return
-
+		dlg = None
 		try:
-			if self.editing_word_data:
-				self.config.update_word(
-					self.current_site_id,
-					self.editing_word_data,
-					word,
-					is_regex,
-					replacement
-				)
+			dlg = WordEntryDialog(self, self.config, self.current_site_id)
+			# Same prePopup()/postPopup() bracketing as every other custom
+			# modal in this add-on (Section 5.4).
+			nvdaGui.mainFrame.prePopup()
+			try:
+				result = dlg.ShowModal()
+			finally:
+				nvdaGui.mainFrame.postPopup()
+			if result == wx.ID_OK:
 				self.words_data = self.config.get_words_for_site(self.current_site_id)
 				self._update_words_list()
-				self._cancel_edit_mode()
-				ui.message(_("Entry updated successfully"))
-				wx.CallAfter(self.wordsList.SetFocus)
-			else:
-				self.config.add_word(self.current_site_id, word, is_regex, replacement)
-				self.words_data = self.config.get_words_for_site(self.current_site_id)
-				self._update_words_list()
-				self.wordCtrl.Clear()
-				self.regexCheck.SetValue(False)
-				self.replacementCtrl.Clear()
 				self._update_button_states()
 				ui.message(_("Entry added successfully"))
-				wx.CallAfter(self.wordCtrl.SetFocus)
-			# Best-effort caution only; never blocks a save, since the
-			# heuristic is not a reliable safety verdict either way.
-			if is_regex and looks_potentially_catastrophic(word):
-				ui.message(_("Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."))
-		except ValueError as e:
-			ui.message(str(e))
+				wx.CallAfter(self.wordsList.SetFocus)
+		finally:
+			if dlg is not None:
+				dlg.Destroy()
 
 	def _onEditWord(self, evt):
 		index = self.wordsList.GetSelection()
@@ -504,18 +444,23 @@ class MainDialog(wx.Dialog):
 		word_data = self.word_data_map.get(index)
 		if not word_data:
 			return
-		self.wordCtrl.SetValue(word_data[WORD_VALUE])
-		self.regexCheck.SetValue(word_data.get(WORD_IS_REGEX, False))
-		self.replacementCtrl.SetValue(word_data.get(WORD_REPLACEMENT, ""))
-		self.wordCtrl.SetFocus()
-		self.editing_word_data = word_data
-		self._update_button_states()
-		ui.message(_("Editing entry: {}").format(self.config._get_display_word(word_data)))
-
-	def _onCancelEdit(self, evt):
-		self._cancel_edit_mode()
-		ui.message(_("Edit cancelled"))
-		wx.CallAfter(self.wordsList.SetFocus)
+		dlg = None
+		try:
+			dlg = WordEntryDialog(self, self.config, self.current_site_id, word_data=word_data)
+			nvdaGui.mainFrame.prePopup()
+			try:
+				result = dlg.ShowModal()
+			finally:
+				nvdaGui.mainFrame.postPopup()
+			if result == wx.ID_OK:
+				self.words_data = self.config.get_words_for_site(self.current_site_id)
+				self._update_words_list()
+				self._update_button_states()
+				ui.message(_("Entry updated successfully"))
+				wx.CallAfter(self.wordsList.SetFocus)
+		finally:
+			if dlg is not None:
+				dlg.Destroy()
 
 	def _onRemoveWord(self, evt):
 		index = self.wordsList.GetSelection()
@@ -541,7 +486,7 @@ class MainDialog(wx.Dialog):
 			if self.config.remove_word(self.current_site_id, word_data):
 				self.words_data = self.config.get_words_for_site(self.current_site_id)
 				self._update_words_list()
-				self._cancel_edit_mode()
+				self._update_button_states()
 				ui.message(_("Entry removed: {}").format(display))
 				wx.CallAfter(self.wordsList.SetFocus)
 			else:
@@ -553,6 +498,119 @@ class MainDialog(wx.Dialog):
 
 	def _onClose(self, evt):
 		self.EndModal(wx.ID_CANCEL)
+
+
+class WordEntryDialog(wx.Dialog):
+	"""Dialog for adding or editing a single Browsers Dictionary entry.
+
+	Modeled directly on NVDA's own built-in speech dictionary Add/Edit
+	dialog (Section 22): the parent MainDialog owns search/list/selection
+	only, and this sub-dialog owns the Pattern/Replacement/regex form and
+	its own validation and OK/Cancel lifecycle. Parent-to-child data flow
+	is one-directional - the parent passes either "adding new" (word_data
+	omitted) or "editing existing" (word_data supplied) state at
+	construction, and this dialog never reaches back into the parent's
+	own word list; on OK it has already saved the entry itself via
+	self.config, and the parent only needs to refresh its own list.
+	"""
+
+	def __init__(self, parent, config, site_id, word_data=None):
+		edit_mode = word_data is not None
+		title = _("Edit Dictionary Entry") if edit_mode else _("Add Dictionary Entry")
+		super().__init__(parent, title=title, style=wx.DEFAULT_DIALOG_STYLE | wx.RESIZE_BORDER)
+		self.config = config
+		self.site_id = site_id
+		self.word_data = word_data
+
+		self._initUI()
+		self._bindEvents()
+
+		if word_data:
+			self.wordCtrl.SetValue(word_data.get(WORD_VALUE, ""))
+			self.regexCheck.SetValue(word_data.get(WORD_IS_REGEX, False))
+			self.replacementCtrl.SetValue(word_data.get(WORD_REPLACEMENT, ""))
+
+		self.Centre()
+		wx.CallAfter(self.wordCtrl.SetFocus)
+
+	def _initUI(self):
+		mainSizer = wx.BoxSizer(wx.VERTICAL)
+
+		mainSizer.Add(wx.StaticText(self, label=_("Pattern:")), 0, wx.LEFT | wx.RIGHT | wx.TOP, 10)
+		self.wordCtrl = wx.TextCtrl(self)
+		mainSizer.Add(self.wordCtrl, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.TOP, 10)
+
+		replacementSizer = wx.BoxSizer(wx.HORIZONTAL)
+		replacementSizer.Add(wx.StaticText(self, label=_("Replacement:")), 0, wx.RIGHT | wx.ALIGN_CENTER_VERTICAL, 5)
+		self.replacementCtrl = wx.TextCtrl(self)
+		replacementSizer.Add(self.replacementCtrl, 1, wx.EXPAND)
+		mainSizer.Add(replacementSizer, 0, wx.EXPAND | wx.LEFT | wx.RIGHT | wx.TOP, 10)
+
+		self.regexCheck = wx.CheckBox(self, label=_("Use as regular expression"))
+		mainSizer.Add(self.regexCheck, 0, wx.LEFT | wx.RIGHT | wx.TOP, 10)
+
+		btnSizer = wx.BoxSizer(wx.HORIZONTAL)
+		self.okBtn = wx.Button(self, wx.ID_OK, label=_("&OK"))
+		self.cancelBtn = wx.Button(self, wx.ID_CANCEL, label=_("&Cancel"))
+		btnSizer.Add(self.okBtn, 0, wx.RIGHT, 5)
+		btnSizer.Add(self.cancelBtn, 0)
+		mainSizer.Add(btnSizer, 0, wx.ALIGN_CENTER | wx.ALL, 10)
+
+		self.SetSizer(mainSizer)
+		self.SetMinSize((450, -1))
+		self.Fit()
+
+	def _bindEvents(self):
+		self.Bind(wx.EVT_BUTTON, self._onOk, self.okBtn)
+		self.Bind(wx.EVT_CHAR_HOOK, self._onCharHook)
+
+	def _onCharHook(self, evt):
+		if evt.GetKeyCode() == wx.WXK_ESCAPE:
+			self.EndModal(wx.ID_CANCEL)
+		else:
+			evt.Skip()
+
+	def _onOk(self, evt):
+		word = self.wordCtrl.GetValue().strip()
+		is_regex = self.regexCheck.GetValue()
+		replacement = self.replacementCtrl.GetValue().strip()
+
+		if not word:
+			ui.message(_("Please enter a pattern"))
+			return
+
+		if is_regex:
+			try:
+				re.compile(word)
+			except re.error as e:
+				ui.message(_("Invalid Regular Expression: {}").format(str(e)))
+				return
+
+		# Validation and the actual save both belong here, in the
+		# sub-dialog's own OK handling (Section 22/Section 12's onSave
+		# principle applied to a plain dialog) - the parent must never
+		# receive an unvalidated or unsaved result it then has to re-check.
+		try:
+			if self.word_data:
+				self.config.update_word(
+					self.site_id,
+					self.word_data,
+					word,
+					is_regex,
+					replacement
+				)
+			else:
+				self.config.add_word(self.site_id, word, is_regex, replacement)
+		except ValueError as e:
+			ui.message(str(e))
+			return
+
+		# Best-effort caution only; never blocks a save, since the
+		# heuristic is not a reliable safety verdict either way.
+		if is_regex and looks_potentially_catastrophic(word):
+			ui.message(_("Warning: this pattern may run slowly or freeze speech on long text. Consider simplifying it."))
+
+		self.EndModal(wx.ID_OK)
 
 
 class AddSiteDialog(wx.Dialog):
@@ -624,7 +682,17 @@ class AddSiteDialog(wx.Dialog):
 		self.Bind(wx.EVT_CHAR_HOOK, self._onCharHook)
 
 	def _populate_modes(self):
-		self.modeCombo.SetSelection(0)
+		# "Single page only" requires an exact URL match, which never
+		# matches again once the page's URL changes even once - and most
+		# real sites do this constantly (a chat interface with a unique,
+		# ever-changing conversation ID in its URL is the confirmed case
+		# that motivated this change; the same is true of any site with
+		# per-article, per-session, or per-item URLs). "Whole website
+		# (domain)" is overwhelmingly the mode a new site actually needs,
+		# so it is the sane default; "Single page only" remains available
+		# as an explicit, narrower opt-in for the genuinely rare site that
+		# needs it.
+		self.modeCombo.SetSelection(1)
 
 	def _set_defaults(self):
 		if self.current_url:
