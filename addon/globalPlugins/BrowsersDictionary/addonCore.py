@@ -166,6 +166,14 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			for word, repl in literal_entries:
 				result_text = result_text.replace(word, repl)
 
+		# Same longest-first ordering as the literal entries above. Regex entries
+		# are otherwise applied in the order they happen to be stored (sorted
+		# alphabetically), so a short pattern such as "link" ran ahead of a more
+		# specific one such as "visited\s*link", consumed the shared word and
+		# left the longer pattern with nothing to match. sort() is stable, so
+		# equal-length patterns keep their stored order.
+		regex_patterns.sort(key=lambda entry: len(entry[0]), reverse=True)
+
 		elapsedBudget = 0.0
 		for pattern, repl in regex_patterns:
 			if elapsedBudget >= REGEX_TIME_BUDGET_SECONDS:
