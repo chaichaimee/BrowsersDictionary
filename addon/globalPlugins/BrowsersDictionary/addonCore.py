@@ -1,5 +1,6 @@
 # addonCore.py
 
+import functools
 import logging
 import re
 import time
@@ -40,6 +41,22 @@ REGEX_TIME_BUDGET_SECONDS = 0.1
 # such chunks are rare in practice and scanning them adds cost for no
 # realistic benefit.
 MAX_SCANNED_TEXT_LENGTH = 20000
+
+
+# A pattern whose last element is an unbounded lazy quantifier (".*?", ".+?",
+# "[^x]*?", "\S+?" ...) with nothing after it can only ever match the minimum
+# (an empty string for "*?"), so a trailing capture group never captures
+# anything and the text it was meant to consume stays in the speech. Such a
+# pattern is compiled with an end-of-text anchor so the lazy part extends to
+# the end of the spoken chunk.
+_TRAILING_LAZY_TAIL = re.compile(r'(?:(?<!\\)\.|\]|\\[wWsSdD])[*+]\?\)*$')
+
+
+@functools.lru_cache(maxsize=512)
+def _compileEntryPattern(pattern):
+	if _TRAILING_LAZY_TAIL.search(pattern):
+		return re.compile(pattern + r"\Z")
+	return re.compile(pattern)
 
 
 class GlobalPlugin(globalPluginHandler.GlobalPlugin):
@@ -181,7 +198,7 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 				break
 			startTime = time.time()
 			try:
-				result_text = re.sub(pattern, repl, result_text)
+				result_text = _compileEntryPattern(pattern).sub(repl, result_text)
 			except re.error as err:
 				log.error(f"BrowsersDictionary: Invalid regex skipped: {pattern[:50]} - {err}")
 			except (RuntimeError, ValueError) as err:

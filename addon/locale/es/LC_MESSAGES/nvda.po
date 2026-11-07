@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Spanish\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:83
 msgid "&Add..."
@@ -79,17 +79,17 @@ msgstr "Aplicar a:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "¿Seguro que quieres eliminar '{}'?"
 
-#: addonCore.py:46
-#: addonCore.py:311
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
-msgstr "Browsers Dictionary"
+msgstr "Diccionario de navegadores"
 
 #: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Opciones de Browsers Dictionary"
 
-#: addonCore.py:335
-#: addonCore.py:341
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "No se puede capturar la URL. Asegúrate de estar en un navegador."
 
@@ -146,6 +146,7 @@ msgstr "Entrada actualizada con éxito"
 #: gui.py:758
 #: gui.py:768
 #: gui.py:777
+# keep-identical
 msgid "Error"
 msgstr "Error"
 
@@ -161,8 +162,8 @@ msgstr "Error al eliminar la entrada"
 msgid "Failed to remove site"
 msgstr "Error al eliminar el sitio"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "Error al guardar la configuración (error de permiso o disco)"
 
@@ -187,7 +188,7 @@ msgstr "Información"
 msgid "Invalid Regular Expression: {}"
 msgstr "Expresión regular no válida: {}"
 
-#: addonCore.py:345
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "Aún no hay ningún sitio configurado para la página actual. Haz doble toque para añadir uno primero."
 
@@ -199,11 +200,11 @@ msgstr "Ningún sitio seleccionado"
 msgid "No valid word entries found in the file."
 msgstr "No se encontraron entradas de palabras válidas en el archivo."
 
-#: addonCore.py:309
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "Abrir la configuración del diccionario de navegadores (un toque), añadir nuevo sitio (doble toque) o editar el sitio actual (triple toque)"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "Entrada original no encontrada"
 
@@ -219,8 +220,8 @@ msgstr "Por favor, introduce un patrón"
 msgid "Please select a site first."
 msgstr "Por favor, selecciona un sitio primero."
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "Expresión regular"
 
@@ -244,8 +245,8 @@ msgstr "Solo una página"
 msgid "Site List"
 msgstr "Lista de sitios"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "Sitio no encontrado"
 
@@ -257,8 +258,8 @@ msgstr "Sitio eliminado: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "El archivo seleccionado no parece ser una configuración de sitio válida de Browsers Dictionary."
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "Esta combinación de patrón/expresión regular ya existe"
 

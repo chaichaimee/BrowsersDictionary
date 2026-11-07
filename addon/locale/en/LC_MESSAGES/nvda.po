@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.2\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-10-02 15:12+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: English\n"
@@ -79,8 +79,8 @@ msgstr "Apply to:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "Are you sure you want to remove '{}'?"
 
-#: addonCore.py:46
-#: addonCore.py:319
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
 msgstr "Browsers Dictionary"
 
@@ -88,8 +88,8 @@ msgstr "Browsers Dictionary"
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary Settings"
 
-#: addonCore.py:343
-#: addonCore.py:349
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "Cannot capture URL. Make sure you are in a browser."
 
@@ -161,8 +161,8 @@ msgstr "Failed to remove entry"
 msgid "Failed to remove site"
 msgstr "Failed to remove site"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "Failed to save configuration (permission or disk error)"
 
@@ -187,7 +187,7 @@ msgstr "Information"
 msgid "Invalid Regular Expression: {}"
 msgstr "Invalid Regular Expression: {}"
 
-#: addonCore.py:353
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "No site configured for the current page yet. Double-tap to add one first."
 
@@ -199,11 +199,11 @@ msgstr "No site selected"
 msgid "No valid word entries found in the file."
 msgstr "No valid word entries found in the file."
 
-#: addonCore.py:317
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "Original entry not found"
 
@@ -219,8 +219,8 @@ msgstr "Please enter a pattern"
 msgid "Please select a site first."
 msgstr "Please select a site first."
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "Regex"
 
@@ -244,8 +244,8 @@ msgstr "Single page only"
 msgid "Site List"
 msgstr "Site List"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "Site not found"
 
@@ -257,8 +257,8 @@ msgstr "Site removed: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "This pattern/regex combination already exists"
 

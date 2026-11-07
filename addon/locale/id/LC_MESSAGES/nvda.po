@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Indonesian\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:83
 msgid "&Add..."
@@ -79,17 +79,17 @@ msgstr "Terapkan ke:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "Apakah Anda yakin ingin menghapus '{}'?"
 
-#: addonCore.py:46
-#: addonCore.py:311
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
-msgstr "Browsers Dictionary"
+msgstr "Kamus Peramban"
 
 #: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Pengaturan Browsers Dictionary"
 
-#: addonCore.py:335
-#: addonCore.py:341
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "Tidak dapat menangkap URL. Pastikan Anda berada di peramban."
 
@@ -161,8 +161,8 @@ msgstr "Gagal menghapus entri"
 msgid "Failed to remove site"
 msgstr "Gagal menghapus situs"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "Gagal menyimpan konfigurasi (kesalahan izin atau disk)"
 
@@ -187,7 +187,7 @@ msgstr "Informasi"
 msgid "Invalid Regular Expression: {}"
 msgstr "Ekspresi Reguler tidak valid: {}"
 
-#: addonCore.py:345
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "Belum ada situs yang dikonfigurasi untuk halaman saat ini. Ketuk dua kali untuk menambahkannya terlebih dahulu."
 
@@ -199,11 +199,11 @@ msgstr "Tidak ada situs yang dipilih"
 msgid "No valid word entries found in the file."
 msgstr "Tidak ada entri kata yang valid ditemukan dalam berkas."
 
-#: addonCore.py:309
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "Buka pengaturan Kamus Peramban (ketuk sekali), tambah situs baru (ketuk dua kali), atau sunting situs saat ini (ketuk tiga kali)"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "Entri asli tidak ditemukan"
 
@@ -219,8 +219,8 @@ msgstr "Silakan masukkan pola"
 msgid "Please select a site first."
 msgstr "Silakan pilih situs terlebih dahulu."
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "Ekspresi Reguler"
 
@@ -244,8 +244,8 @@ msgstr "Hanya satu halaman"
 msgid "Site List"
 msgstr "Daftar Situs"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "Situs tidak ditemukan"
 
@@ -257,8 +257,8 @@ msgstr "Situs dihapus: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "Berkas yang dipilih tampaknya bukan konfigurasi situs Browsers Dictionary yang valid."
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "Kombinasi pola/ekspresi reguler ini sudah ada"
 

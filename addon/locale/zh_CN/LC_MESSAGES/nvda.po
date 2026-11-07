@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Simplified)\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:83
 msgid "&Add..."
@@ -79,17 +79,17 @@ msgstr "应用于:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "确定要删除“{}”吗？"
 
-#: addonCore.py:46
-#: addonCore.py:311
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
-msgstr "Browsers Dictionary"
+msgstr "浏览器词典"
 
 #: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary 设置"
 
-#: addonCore.py:335
-#: addonCore.py:341
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "无法获取 URL，请确保您在浏览器窗口中。"
 
@@ -161,8 +161,8 @@ msgstr "删除词条失败"
 msgid "Failed to remove site"
 msgstr "删除网站失败"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "保存配置失败（权限不足或磁盘错误）"
 
@@ -187,7 +187,7 @@ msgstr "提示信息"
 msgid "Invalid Regular Expression: {}"
 msgstr "正则表达式无效: {}"
 
-#: addonCore.py:345
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "当前页面尚未配置站点。双击以先添加一个。"
 
@@ -199,11 +199,11 @@ msgstr "未选择任何网站"
 msgid "No valid word entries found in the file."
 msgstr "文件中未找到有效的词条。"
 
-#: addonCore.py:309
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "打开浏览器词典设置（单击），添加新站点（双击），或编辑当前站点（三击）"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "未找到原始词条"
 
@@ -219,8 +219,8 @@ msgstr "请输入模式"
 msgid "Please select a site first."
 msgstr "请先选择一个网站。"
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "正则表达式"
 
@@ -244,8 +244,8 @@ msgstr "仅单个页面"
 msgid "Site List"
 msgstr "网站列表"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "未找到该网站"
 
@@ -257,8 +257,8 @@ msgstr "已删除网站: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "所选文件似乎不是有效的 Browsers Dictionary 网站配置文件。"
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "该模式/正则表达式组合已存在"
 

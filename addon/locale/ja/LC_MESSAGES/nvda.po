@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Japanese\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:83
 msgid "&Add..."
@@ -79,17 +79,17 @@ msgstr "適用先:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "'{}' を削除してもよろしいですか？"
 
-#: addonCore.py:46
-#: addonCore.py:311
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
-msgstr "Browsers Dictionary"
+msgstr "ブラウザ用辞書"
 
 #: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary の設定"
 
-#: addonCore.py:335
-#: addonCore.py:341
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "URLを取得できません。ブラウザが開いていることを確認してください。"
 
@@ -161,8 +161,8 @@ msgstr "項目の削除に失敗しました"
 msgid "Failed to remove site"
 msgstr "サイトの削除に失敗しました"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "設定の保存に失敗しました (アクセス許可またはディスクエラー)"
 
@@ -187,7 +187,7 @@ msgstr "情報"
 msgid "Invalid Regular Expression: {}"
 msgstr "無効な正規表現: {}"
 
-#: addonCore.py:345
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "現在のページに設定されたサイトはありません。最初に追加するにはダブルタップしてください。"
 
@@ -199,11 +199,11 @@ msgstr "サイトが選択されていません"
 msgid "No valid word entries found in the file."
 msgstr "ファイル内に有効な単語項目が見つかりませんでした。"
 
-#: addonCore.py:309
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "ブラウザ辞書の設定を開く（シングルタップ）、新しいサイトを追加する（ダブルタップ）、または現在のサイトを編集する（トリプルタップ）"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "元の項目が見つかりません"
 
@@ -219,8 +219,8 @@ msgstr "パターンを入力してください"
 msgid "Please select a site first."
 msgstr "最初にサイトを選択してください。"
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "正規表現"
 
@@ -244,8 +244,8 @@ msgstr "単一ページのみ"
 msgid "Site List"
 msgstr "サイト一覧"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "サイトが見つかりません"
 
@@ -257,8 +257,8 @@ msgstr "サイトが削除されました: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "選択されたファイルは有効な Browsers Dictionary サイト設定ファイルではないようです。"
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "このパターンと正規表現の組み合わせは既に存在します"
 

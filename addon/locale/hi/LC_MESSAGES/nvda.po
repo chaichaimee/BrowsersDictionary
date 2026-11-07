@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hindi\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:83
 msgid "&Add..."
@@ -79,17 +79,17 @@ msgstr "पर लागू करें:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "क्या आप निश्चित रूप से '{}' को हटाना चाहते हैं?"
 
-#: addonCore.py:46
-#: addonCore.py:311
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
-msgstr "Browsers Dictionary"
+msgstr "ब्राउज़र्स डिक्शनरी"
 
 #: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary सेटिंग्स"
 
-#: addonCore.py:335
-#: addonCore.py:341
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "URL कैप्चर नहीं किया जा सका। सुनिश्चित करें कि आप ब्राउज़र में हैं।"
 
@@ -161,8 +161,8 @@ msgstr "प्रविष्टि हटाने में विफल"
 msgid "Failed to remove site"
 msgstr "साइट हटाने में विफल"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "कॉन्फ़िगरेशन सहेजने में विफल (अनुमति या डिस्क त्रुटि)"
 
@@ -187,7 +187,7 @@ msgstr "जानकारी"
 msgid "Invalid Regular Expression: {}"
 msgstr "अमान्य नियमित अभिव्यक्ति: {}"
 
-#: addonCore.py:345
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "वर्तमान पृष्ठ के लिए अभी तक कोई साइट कॉन्फ़िगर नहीं की गई है। पहले जोड़ने के लिए दो बार टैप करें।"
 
@@ -199,11 +199,11 @@ msgstr "कोई साइट चयनित नहीं है"
 msgid "No valid word entries found in the file."
 msgstr "फ़ाइल में कोई मान्य शब्द प्रविष्टियां नहीं मिलीं।"
 
-#: addonCore.py:309
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "ब्राउज़र शब्दकोश सेटिंग्स खोलें (एक बार टैप), नई साइट जोड़ें (दो बार टैप), या वर्तमान साइट संपादित करें (तीन बार टैप)"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "मूल प्रविष्टि नहीं मिली"
 
@@ -219,8 +219,8 @@ msgstr "कृपया एक पैटर्न दर्ज करें"
 msgid "Please select a site first."
 msgstr "कृपया पहले एक साइट चुनें।"
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "रेगेक्स"
 
@@ -244,8 +244,8 @@ msgstr "केवल एक पृष्ठ"
 msgid "Site List"
 msgstr "साइट सूची"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "साइट नहीं मिली"
 
@@ -257,8 +257,8 @@ msgstr "साइट हटाई गई: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "चयनित फ़ाइल एक मान्य Browsers Dictionary साइट कॉन्फ़िगरेशन प्रतीत नहीं होती है।"
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "यह पैटर्न/रेगेक्स संयोजन पहले से मौजूद है"
 

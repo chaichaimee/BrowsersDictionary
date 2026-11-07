@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.10.1\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-09-17 09:21+0700\n"
+"POT-Creation-Date: 2026-11-06 15:43+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Thai\n"
@@ -10,7 +10,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: DevOn Addon\n"
+"X-Generator: ChaiBot Addon\n"
 
 #: gui.py:83
 msgid "&Add..."
@@ -79,17 +79,17 @@ msgstr "ปรับใช้กับ:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ '{}'?"
 
-#: addonCore.py:46
-#: addonCore.py:311
+#: addonCore.py:63
+#: addonCore.py:336
 msgid "Browsers Dictionary"
-msgstr "Browsers Dictionary"
+msgstr "พจนานุกรมเบราว์เซอร์"
 
 #: gui.py:21
 msgid "Browsers Dictionary Settings"
 msgstr "การตั้งค่า Browsers Dictionary"
 
-#: addonCore.py:335
-#: addonCore.py:341
+#: addonCore.py:360
+#: addonCore.py:366
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "ไม่สามารถดึง URL ได้ โปรดตรวจสอบให้แน่ใจว่าคุณอยู่ในเบราว์เซอร์"
 
@@ -161,8 +161,8 @@ msgstr "ลบรายการไม่สำเร็จ"
 msgid "Failed to remove site"
 msgstr "ลบเว็บไซต์ไม่สำเร็จ"
 
-#: manager.py:417
-#: manager.py:451
+#: manager.py:432
+#: manager.py:466
 msgid "Failed to save configuration (permission or disk error)"
 msgstr "บันทึกการตั้งค่าไม่สำเร็จ (เกิดข้อผิดพลาดด้านสิทธิ์หรือดิสก์)"
 
@@ -187,7 +187,7 @@ msgstr "แจ้งเพื่อทราบ"
 msgid "Invalid Regular Expression: {}"
 msgstr "นิพจน์เรกูลาร์ไม่ถูกต้อง: {}"
 
-#: addonCore.py:345
+#: addonCore.py:370
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "ยังไม่มีการกำหนดค่าเว็บไซต์สำหรับหน้าปัจจุบัน แตะสองครั้งเพื่อเพิ่มก่อน"
 
@@ -199,11 +199,11 @@ msgstr "ไม่ได้เลือกเว็บไซต์"
 msgid "No valid word entries found in the file."
 msgstr "ไม่พบรายการคำศัพท์ที่ถูกต้องในไฟล์"
 
-#: addonCore.py:309
+#: addonCore.py:334
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "เปิดการตั้งค่าพจนานุกรมเบราว์เซอร์ (แตะครั้งเดียว), เพิ่มเว็บไซต์ใหม่ (แตะสองครั้ง), หรือแก้ไขเว็บไซต์ปัจจุบัน (แตะสามครั้ง)"
 
-#: manager.py:436
+#: manager.py:451
 msgid "Original entry not found"
 msgstr "ไม่พบรายการเดิม"
 
@@ -219,8 +219,8 @@ msgstr "กรุณากรอกรูปแบบ"
 msgid "Please select a site first."
 msgstr "กรุณาเลือกเว็บไซต์ก่อน"
 
-#: manager.py:383
-#: manager.py:384
+#: manager.py:398
+#: manager.py:399
 msgid "Regex"
 msgstr "นิพจน์เรกูลาร์"
 
@@ -244,8 +244,8 @@ msgstr "เฉพาะหน้าเดียวเท่านั้น"
 msgid "Site List"
 msgstr "รายชื่อเว็บไซต์"
 
-#: manager.py:398
-#: manager.py:423
+#: manager.py:413
+#: manager.py:438
 msgid "Site not found"
 msgstr "ไม่พบเว็บไซต์"
 
@@ -257,8 +257,8 @@ msgstr "ลบเว็บไซต์แล้ว: {}"
 msgid "The selected file does not appear to be a valid Browsers Dictionary site configuration."
 msgstr "ไฟล์ที่เลือกดูเหมือนไม่ใช่ไฟล์การตั้งค่าเว็บไซต์ของ Browsers Dictionary ที่ถูกต้อง"
 
-#: manager.py:411
-#: manager.py:440
+#: manager.py:426
+#: manager.py:455
 msgid "This pattern/regex combination already exists"
 msgstr "การรวมรูปแบบและนิพจน์เรกูลาร์นี้มีอยู่แล้ว"
 

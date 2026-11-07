@@ -80,6 +80,8 @@ class BrowsersDictionaryConfig:
 
 		self._ensure_config_dir()
 		copied_any = False
+		copyFailed = False
+		copiedSources = []
 
 		for item in os.listdir(old_dir):
 			src = os.path.join(old_dir, item)
@@ -96,15 +98,28 @@ class BrowsersDictionaryConfig:
 					shutil.copy2(src, backup_dst)
 					copied_any = True
 					log.info(f"BrowsersDictionary addon: Existing file {item} kept; old copy from {layout_label} saved as {os.path.basename(backup_dst)}")
+				copiedSources.append(src)
 			except OSError as err:
+				copyFailed = True
 				log.error(f"BrowsersDictionary addon: Failed to copy old config file {item} from {layout_label}: {err}")
 
-		if copied_any:
+		if not copied_any:
+			return
+
+		# Only files that were verifiably copied are removed, one by one, and the
+		# folder itself is removed with rmdir, which refuses a non-empty folder.
+		# A file that failed to copy, or a subfolder this routine never handled,
+		# is therefore left in place instead of being wiped by a recursive delete.
+		for copiedSrc in copiedSources:
 			try:
-				shutil.rmtree(old_dir)
-				log.info(f"BrowsersDictionary addon: Old config folder ({layout_label}) migrated to new location.")
+				os.remove(copiedSrc)
 			except OSError as err:
-				log.error(f"BrowsersDictionary addon: Failed to remove old config folder ({layout_label}): {err}")
+				log.error(f"BrowsersDictionary addon: Failed to remove migrated file {os.path.basename(copiedSrc)} ({layout_label}): {err}")
+		try:
+			os.rmdir(old_dir)
+			log.info(f"BrowsersDictionary addon: Old config folder ({layout_label}) migrated to new location.")
+		except OSError:
+			log.info(f"BrowsersDictionary addon: Old config folder ({layout_label}) kept because it still holds items that were not migrated (copy failed: {copyFailed}).")
 
 	def _safe_filename(self, name):
 		name = re.sub(r'[\\/*?:"<>|]', "_", name)
