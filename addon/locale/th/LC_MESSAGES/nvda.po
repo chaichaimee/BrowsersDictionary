@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-11-06 15:43+0700\n"
+"POT-Creation-Date: 2026-11-11 08:00+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Thai\n"
@@ -79,8 +79,8 @@ msgstr "ปรับใช้กับ:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "คุณแน่ใจหรือไม่ว่าต้องการลบ '{}'?"
 
-#: addonCore.py:63
-#: addonCore.py:336
+#: addonCore.py:64
+#: addonCore.py:324
 msgid "Browsers Dictionary"
 msgstr "พจนานุกรมเบราว์เซอร์"
 
@@ -88,8 +88,8 @@ msgstr "พจนานุกรมเบราว์เซอร์"
 msgid "Browsers Dictionary Settings"
 msgstr "การตั้งค่า Browsers Dictionary"
 
-#: addonCore.py:360
-#: addonCore.py:366
+#: addonCore.py:348
+#: addonCore.py:354
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "ไม่สามารถดึง URL ได้ โปรดตรวจสอบให้แน่ใจว่าคุณอยู่ในเบราว์เซอร์"
 
@@ -187,7 +187,7 @@ msgstr "แจ้งเพื่อทราบ"
 msgid "Invalid Regular Expression: {}"
 msgstr "นิพจน์เรกูลาร์ไม่ถูกต้อง: {}"
 
-#: addonCore.py:370
+#: addonCore.py:358
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "ยังไม่มีการกำหนดค่าเว็บไซต์สำหรับหน้าปัจจุบัน แตะสองครั้งเพื่อเพิ่มก่อน"
 
@@ -199,7 +199,7 @@ msgstr "ไม่ได้เลือกเว็บไซต์"
 msgid "No valid word entries found in the file."
 msgstr "ไม่พบรายการคำศัพท์ที่ถูกต้องในไฟล์"
 
-#: addonCore.py:334
+#: addonCore.py:322
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "เปิดการตั้งค่าพจนานุกรมเบราว์เซอร์ (แตะครั้งเดียว), เพิ่มเว็บไซต์ใหม่ (แตะสองครั้ง), หรือแก้ไขเว็บไซต์ปัจจุบัน (แตะสามครั้ง)"
 

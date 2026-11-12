@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-11-06 15:43+0700\n"
+"POT-Creation-Date: 2026-11-11 08:00+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Hindi\n"
@@ -79,8 +79,8 @@ msgstr "पर लागू करें:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "क्या आप निश्चित रूप से '{}' को हटाना चाहते हैं?"
 
-#: addonCore.py:63
-#: addonCore.py:336
+#: addonCore.py:64
+#: addonCore.py:324
 msgid "Browsers Dictionary"
 msgstr "ब्राउज़र्स डिक्शनरी"
 
@@ -88,8 +88,8 @@ msgstr "ब्राउज़र्स डिक्शनरी"
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary सेटिंग्स"
 
-#: addonCore.py:360
-#: addonCore.py:366
+#: addonCore.py:348
+#: addonCore.py:354
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "URL कैप्चर नहीं किया जा सका। सुनिश्चित करें कि आप ब्राउज़र में हैं।"
 
@@ -187,7 +187,7 @@ msgstr "जानकारी"
 msgid "Invalid Regular Expression: {}"
 msgstr "अमान्य नियमित अभिव्यक्ति: {}"
 
-#: addonCore.py:370
+#: addonCore.py:358
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "वर्तमान पृष्ठ के लिए अभी तक कोई साइट कॉन्फ़िगर नहीं की गई है। पहले जोड़ने के लिए दो बार टैप करें।"
 
@@ -199,7 +199,7 @@ msgstr "कोई साइट चयनित नहीं है"
 msgid "No valid word entries found in the file."
 msgstr "फ़ाइल में कोई मान्य शब्द प्रविष्टियां नहीं मिलीं।"
 
-#: addonCore.py:334
+#: addonCore.py:322
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "ब्राउज़र शब्दकोश सेटिंग्स खोलें (एक बार टैप), नई साइट जोड़ें (दो बार टैप), या वर्तमान साइट संपादित करें (तीन बार टैप)"
 

@@ -28,6 +28,7 @@ addonHandler.initTranslation()
 DOUBLE_TAP_THRESHOLD = 0.4
 URL_UPDATE_INTERVAL = 0.5
 BROWSER_APPS = {"firefox", "chrome", "msedge", "brave", "opera", "iexplore"}
+_URL_FIELD_ROLES = frozenset({controlTypes.Role.EDITABLETEXT, controlTypes.Role.COMBOBOX})
 
 # Hard cap on how long, in total, the regex entries for a single spoken
 # chunk are allowed to run. Once exceeded, remaining regex entries for
@@ -97,22 +98,11 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 
 		siteData = self.config.get_site_by_url(currentUrl)
 		if not siteData:
-			# Temporary diagnostic (Section 20): confirms whether the cached
-			# URL is even reaching a configured site at all. Remove once the
-			# "messages until" root cause is confirmed and closed.
-			if log.isEnabledFor(logging.DEBUG):
-				log.debug(f"BrowsersDictionary: no site configured for current URL ({currentUrl[:80]!r})")
 			return speechSequence
 
 		wordsData = siteData.get("words", [])
 		if not wordsData:
 			return speechSequence
-
-		if log.isEnabledFor(logging.DEBUG):
-			log.debug(
-				f"BrowsersDictionary: matched site '{siteData.get('display_name', '?')}' "
-				f"with {len(wordsData)} entrie(s) for URL ({currentUrl[:80]!r})"
-			)
 
 		# A dictionary pattern is matched against a run of adjacent string
 		# items joined together, not against each item in isolation. NVDA
@@ -295,15 +285,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
 			# racing a COM call against an object that is no longer valid.
 			if not url and self._objectStillHasRealFocus(target_obj):
 				objRole = getattr(target_obj, 'role', None)
-				if objRole in (controlTypes.Role.EDIT, controlTypes.Role.COMBOBOX):
+				if objRole in _URL_FIELD_ROLES:
 					try:
-						uia_elem = getattr(target_obj, 'UIAElement', None)
-						if uia_elem and self._objectStillHasRealFocus(target_obj):
-							val = uia_elem.CurrentValue
-							if val and isinstance(val, str) and (val.startswith('http') or val.startswith('file')):
-								url = val
-					except (COMError, AttributeError, RuntimeError, ValueError, OSError):
-						pass
+						fieldValue = target_obj.value
+					except (COMError, AttributeError, RuntimeError, ValueError, OSError, NotImplementedError):
+						fieldValue = None
+					if fieldValue and isinstance(fieldValue, str) and fieldValue.startswith(('http', 'file')):
+						url = fieldValue
 
 			if url:
 				core.callLater(0, self._set_cached_url, url)

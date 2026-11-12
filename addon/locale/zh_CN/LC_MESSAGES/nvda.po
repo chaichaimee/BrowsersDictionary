@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-11-06 15:43+0700\n"
+"POT-Creation-Date: 2026-11-11 08:00+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: Chinese (Simplified)\n"
@@ -79,8 +79,8 @@ msgstr "应用于:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "确定要删除“{}”吗？"
 
-#: addonCore.py:63
-#: addonCore.py:336
+#: addonCore.py:64
+#: addonCore.py:324
 msgid "Browsers Dictionary"
 msgstr "浏览器词典"
 
@@ -88,8 +88,8 @@ msgstr "浏览器词典"
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary 设置"
 
-#: addonCore.py:360
-#: addonCore.py:366
+#: addonCore.py:348
+#: addonCore.py:354
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "无法获取 URL，请确保您在浏览器窗口中。"
 
@@ -187,7 +187,7 @@ msgstr "提示信息"
 msgid "Invalid Regular Expression: {}"
 msgstr "正则表达式无效: {}"
 
-#: addonCore.py:370
+#: addonCore.py:358
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "当前页面尚未配置站点。双击以先添加一个。"
 
@@ -199,7 +199,7 @@ msgstr "未选择任何网站"
 msgid "No valid word entries found in the file."
 msgstr "文件中未找到有效的词条。"
 
-#: addonCore.py:334
+#: addonCore.py:322
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "打开浏览器词典设置（单击），添加新站点（双击），或编辑当前站点（三击）"
 

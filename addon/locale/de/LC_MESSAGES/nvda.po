@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: BrowsersDictionary 2026.11.0\n"
+"Project-Id-Version: BrowsersDictionary 2026.11.1\n"
 "Report-Msgid-Bugs-To: chaicm75@gmail.com\n"
-"POT-Creation-Date: 2026-11-06 15:43+0700\n"
+"POT-Creation-Date: 2026-11-11 08:00+0700\n"
 "PO-Revision-Date: \n"
 "Last-Translator: chaiBot and Malee Yamazaki\n"
 "Language-Team: German\n"
@@ -79,8 +79,8 @@ msgstr "Anwenden auf:"
 msgid "Are you sure you want to remove '{}'?"
 msgstr "Sind Sie sicher, dass Sie '{}' entfernen möchten?"
 
-#: addonCore.py:63
-#: addonCore.py:336
+#: addonCore.py:64
+#: addonCore.py:324
 msgid "Browsers Dictionary"
 msgstr "Browser-Wörterbuch"
 
@@ -88,8 +88,8 @@ msgstr "Browser-Wörterbuch"
 msgid "Browsers Dictionary Settings"
 msgstr "Browsers Dictionary - Einstellungen"
 
-#: addonCore.py:360
-#: addonCore.py:366
+#: addonCore.py:348
+#: addonCore.py:354
 msgid "Cannot capture URL. Make sure you are in a browser."
 msgstr "URL kann nicht erfasst werden. Stellen Sie sicher, dass Sie sich in einem Browser befinden."
 
@@ -187,7 +187,7 @@ msgstr "Informationen"
 msgid "Invalid Regular Expression: {}"
 msgstr "Ungültiger regulärer Ausdruck: {}"
 
-#: addonCore.py:370
+#: addonCore.py:358
 msgid "No site configured for the current page yet. Double-tap to add one first."
 msgstr "Für die aktuelle Seite ist noch keine Website konfiguriert. Zum Hinzufügen doppelt tippen."
 
@@ -199,7 +199,7 @@ msgstr "Keine Webseite ausgewählt"
 msgid "No valid word entries found in the file."
 msgstr "Keine gültigen Worteinträge in der Datei gefunden."
 
-#: addonCore.py:334
+#: addonCore.py:322
 msgid "Open Browsers Dictionary settings (single tap), add new site (double tap), or edit current site (triple tap)"
 msgstr "Einstellungen für das Browser-Wörterbuch öffnen (einfaches Tippen), neue Website hinzufügen (doppeltes Tippen) oder aktuelle Website bearbeiten (dreifaches Tippen)"
 
